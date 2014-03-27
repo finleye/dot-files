@@ -1,3 +1,2 @@
 " Set leader key to comma
 let mapleader=","
-.vimrc.before
