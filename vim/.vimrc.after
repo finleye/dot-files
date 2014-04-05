@@ -1,5 +1,8 @@
 "turn on syntax highlighting
+set nocursorcolumn
+set nocursorline
 syntax on
+syntax sync minlines=256
 set background=dark
 let g:solarized_termcolors=16
 se t_Co=16
