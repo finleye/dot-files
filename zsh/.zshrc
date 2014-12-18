@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
+#ZSH_THEME="bureau"
 DEFAULT_USER="coreyfinley"
 
 export TERM='xterm-256color'
@@ -14,6 +15,9 @@ export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
 export CXX=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/g++-4.2
 export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
 
+export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
+export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
+export PATH=$PATH:$SPARK_HOME/bin
 # Example aliases
 # alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -53,15 +57,17 @@ export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
+plugins=(vi-mode  history-substring-search colored-man colorize emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bin/tmuxinator.zsh
 
 # User configuration
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
 eval "$(rbenv init -)"
 
-function deploy(){cap deploy -S rails_env="staging" -S branch=$@}
+#function deploy(){cap deploy -S rails_env="staging" -S branch=$@}
 export EDITOR="vim"
 
 #export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
@@ -84,12 +90,17 @@ alias g="git"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gc="git checkout"
+alias gcb="git checkout -b"
 alias gr="git rebase -i"
+alias gf="git fetch"
 
 #rails
 alias migrate="rake db:migrate && rake db:test:prepare"
 alias rs="rails s"
 alias rc="rails c"
+
+#elstic dump
+alias edump="elasticdump --input=https://ghostFacedKilla:casHRul353v3rY7HiNgAr0undM3@a5e6a3f487180f34000.qbox.io/$2 --output=http://localhost:9200/$3 --type=$1"
 
 #workers
 alias worker:clean="rake jobs:clear"
@@ -98,3 +109,23 @@ alias migrate="bundle exec rake db:migrate db:test:prepare"
 
 #bundler
 alias bx="bundle exec"
+alias rx="rbenv exec"
+
+alias startmongo="mongod --config /usr/local/etc/mongod.conf"
+
+alias ping_qb1="ping a5e6a3f487180f34000.qbox.io"
+alias ping_qb2="ping a5e6a3f487180f34001.qbox.io"
+
+alias ttr="tmuxinator"
+alias tts="tmuxinator s $1"
+
+function deploy(){bundle exec cap deploy -S rails_env="staging" -S branch=$@}
+
+alias tml="tmux list-sessions"
+alias tma="tmux -2 attach -t $1"
+alias tmk="tmux kill-session -t $1"
+alias tmr="tmux rename-window $1"
+
+alias staging-push="git aws.push --env rza-staging"
+alias production-push="git aws.push --env rza-production"
+
