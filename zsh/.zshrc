@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 #ZSH_THEME="bureau"
+#ZSH_THEME="avit"
 DEFAULT_USER="coreyfinley"
 
 export TERM='xterm-256color'
@@ -18,6 +19,12 @@ export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
 export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
 export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 export PATH=$PATH:$SPARK_HOME/bin
+
+# User configuration
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
+#export PATH=$PATH:$HOME/AWS-EB/eb/macosx/python2.7/
+eval "$(rbenv init -)"
 # Example aliases
 # alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -57,15 +64,11 @@ export PATH=$PATH:$SPARK_HOME/bin
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
-plugins=(vi-mode  history-substring-search colored-man colorize emoji-clock)
+plugins=(history-substring-search colored-man colorize)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bin/tmuxinator.zsh
+#source /usr/bin/tmuxinator.zsh
 
-# User configuration
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
-eval "$(rbenv init -)"
 
 #function deploy(){cap deploy -S rails_env="staging" -S branch=$@}
 export EDITOR="vim"
@@ -91,8 +94,10 @@ alias gb="git branch"
 alias gbd="git branch -D"
 alias gc="git checkout"
 alias gcb="git checkout -b"
-alias gr="git rebase -i"
+alias gri="git rebase -i"
 alias gf="git fetch"
+alias gp="git pull"
+
 
 #rails
 alias migrate="rake db:migrate && rake db:test:prepare"
@@ -116,8 +121,7 @@ alias startmongo="mongod --config /usr/local/etc/mongod.conf"
 alias ping_qb1="ping a5e6a3f487180f34000.qbox.io"
 alias ping_qb2="ping a5e6a3f487180f34001.qbox.io"
 
-alias ttr="tmuxinator"
-alias tts="tmuxinator s $1"
+alias tx="tmuxinator"
 
 function deploy(){bundle exec cap deploy -S rails_env="staging" -S branch=$@}
 
