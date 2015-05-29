@@ -1,3 +1,12 @@
+"call janus#disable_plugin('nerdtree')
+"call janus#disable_plugin('ctrlp')
+call janus#disable_plugin('vim-easymotion')
+call janus#disable_plugin('NrrwRgn')
+"call janus#disable_plugin('buffergator')
+call janus#disable_plugin('vroom')
+call janus#disable_plugin('ZoomWin')
+call janus#disable_plugin('vimwiki')
+
 " Set leader key to comma
 let mapleader=","
 
@@ -13,3 +22,12 @@ let g:Powerline_mode_cv="V·BLOCK"
 let g:Powerline_mode_S="S·LINE"
 let g:Powerline_mode_cs="S·BLOCK"
 let g:airline#extensions#tabline#enabled = 1
+
+" """""""""""
+" Unite
+" """""""""""
+"let g:extra_whitespace_ignored_filetypes = ['unite']
+"let g:unite_source_history_yank_enable = 1
+"let g:unite_source_history_yank_limit=1000
+"let g:unite_source_history_yank_file=$HOME.'/.vim/yankring.txt'
+"nmap <buffer> <ESC> <Plug>(unite_exit)

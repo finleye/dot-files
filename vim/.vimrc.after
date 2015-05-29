@@ -37,7 +37,29 @@ nnoremap <silent> <C-j> <C-w>j
 
 " Save
 map <Leader>w :w<CR>
+map <Leader>q :q<CR>
 
+" """""""""""
+" Unite
+" """""""""""
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"nnoremap <C-p>      :<C-u>Unite  -no-split -buffer-name=files   -start-insert file_rec<cr>
+"nnoremap <leader>uf :<C-u>Unite  -no-split -buffer-name=files   -start-insert file<cr>
+"nnoremap <leader>ut :<C-u>Unite  -no-split -buffer-name=files   file<cr>
+"nnoremap <leader>uo :<C-u>Unite  -no-split -buffer-name=outline -start-insert outline<cr>
+"nnoremap <C-y>      :<C-u>Unite  -no-split -buffer-name=yank    history/yank<cr>
+"nnoremap <leader>ub :<C-u>Unite  -no-split -buffer-name=buffer  buffer<cr>
+
+"" Custom mappings for the unite buffer
+"autocmd FileType unite call s:unite_settings()
+"function! s:unite_settings()
+  "" Play nice with supertab
+  "let b:SuperTabDisabled=1
+  "" Enable navigation with control-j and control-k in insert mode
+  "imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  "imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  "imap <buffer> <ESC>   <Plug>(unite_exit)
+"endfunction
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
@@ -52,11 +74,52 @@ nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
 
 " tSlime
-let g:turbux_command_rspec = "bundle exec rspec"
+let g:turbux_command_rspec = "bin/rspec"
 let g:turbux_runner  = 'tslime'
 let g:no_turbux_mappings = 1
 
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+" =================================================
+" Awesome macro that promotes Rspec locals to 'lets'
+" =================================================
+function! PromoteToLet()
+  :normal! dd
+  ":exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
+
+" ================ Switch between test and prod code ========================================
+function! OpenTestAlternate()
+  let new_file = AlternateForCurrentFile()
+  exec ':e ' . new_file
+endfunction
+function! AlternateForCurrentFile()
+  let current_file = expand("%")
+  let new_file = current_file
+  let in_spec = match(current_file, '^spec/') != -1
+  let going_to_spec = !in_spec
+  let in_app = match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1 || match(current_file, '\<workers\>') != -1 || match(current_file, '\<policies\>') != -1
+  if going_to_spec
+    if in_app
+      let new_file = substitute(new_file, '^app/', '', '')
+    end
+    let new_file = substitute(new_file, '\.rb$', '_spec.rb', '')
+    let new_file = 'spec/' . new_file
+  else
+    let new_file = substitute(new_file, '_spec\.rb$', '.rb', '')
+    let new_file = substitute(new_file, '^spec/', '', '')
+    if in_app
+      let new_file = 'app/' . new_file
+    end
+  endif
+  return new_file
+endfunction
+nnoremap <leader><Space> :call OpenTestAlternate()<cr>
+
+"let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
 " disable syntastic by default
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
@@ -64,3 +127,13 @@ nnoremap <Leader>c :SyntasticCheck<CR>
 
 " regenerate tags
 nnoremap <Leader>R :!ctags -R<CR>
+
+" 80 line stuff
+set colorcolumn=80
+
+" rubocop
+let g:vimrubocop_keymap = 0
+nmap <Leader>rc :RuboCop<CR>
+
+"resource
+nnoremap <leader>sv :source ~/.vimrc.after<cr>

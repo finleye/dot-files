@@ -130,6 +130,12 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias tmr="tmux rename-window $1"
 
+alias ebd="bin/rake  eb:deploy\\[$1\\]"
+
+alias cons="bin/rails c"
+
 alias staging-push="git aws.push --env rza-staging"
 alias production-push="git aws.push --env rza-production"
 
+# added by travis gem
+[ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
