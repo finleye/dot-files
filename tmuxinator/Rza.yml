@@ -20,7 +20,7 @@ root: ~/Documents/Rza
 
 windows:
   - editor:
-      layout: 3270,362x96,0,0{181x96,0,0,0,180x96,182,0,1}
+      layout: edcf,362x84,0,0{215x84,0,0,0,146x84,216,0,3}
       panes:
         - vim
         - g st

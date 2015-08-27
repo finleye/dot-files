@@ -157,3 +157,27 @@ nmap <Leader>s :SyntasticCheck<CR>
 
 "resource
 nnoremap <leader>src :source ~/.vimrc.after<cr>
+
+"pick
+nnoremap <silent> <C-p> :call PickFile()<CR>
+"nnoremap <silent> <C-s> :call PickFileSplit()<CR>
+"nnoremap <silent> <C-v> :call PickFileVerticalSplit()<CR>
+nnoremap <silent> <C-t> :call PickFileTab()<CR>
+nnoremap <silent> <C-b> :call PickBuffer()<CR>
+nnoremap <leader>] :call PickTag()<CR>
+
+"silver searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+"quickfix-reflector
+let g:qf_modifiable = 1
+let g:qf_join_changes = 1
+let g:qf_write_changes = 1
+
+" commandline things
+nnoremap <Leader>G :Git<Space>
+nnoremap <Leader>f :Ag<Space>
+nnoremap <Leader>1 :!<Space>
+
+" nerdtree
+map <leader>m :NERDTreeFind<CR>

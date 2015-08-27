@@ -1,7 +1,7 @@
 # ~/.tmuxinator/Platform.yml
 
-name: Sandbox
-root: ~/Documents/sandbox
+name: Scratchpad
+root: ~/Documents/scratchpad
 
 # Optional tmux socket
 # socket_name: foo
@@ -22,5 +22,5 @@ windows:
   - editor:
       layout: 3270,362x96,0,0{181x96,0,0,0,180x96,182,0,1}
       panes:
-        - vim
+        - vim .
         - g st
