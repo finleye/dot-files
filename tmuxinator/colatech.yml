@@ -1,6 +1,6 @@
-# ~/.tmuxinator/Platform.yml
+# ~/.tmuxinator/colatech.yml
 
-name: Platform
+name: colatech
 root: ~/Documents/lit-earth-2570
 
 # Optional tmux socket
