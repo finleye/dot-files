@@ -137,5 +137,7 @@ alias cons="bin/rails c"
 alias staging-push="git aws.push --env rza-staging"
 alias production-push="git aws.push --env rza-production"
 
+alias tacocat="bin/eb deploy qa4"
+
 # added by travis gem
 [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
