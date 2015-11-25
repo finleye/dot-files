@@ -1,11 +1,13 @@
 "turn on syntax highlighting
 set nocursorcolumn
 set nocursorline
+set hlsearch
+set ignorecase
 syntax on
 syntax sync minlines=256
 set background=dark
 let g:solarized_termcolors=16
-se t_Co=16
+set t_Co=16
 colorscheme solarized
 
 if !has("gui_running")
@@ -35,31 +37,11 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-" Save
-map <Leader>W :w<CR>
-map <Leader>Q :q<CR>
-
-" """""""""""
-" Unite
-" """""""""""
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
-"nnoremap <C-p>      :<C-u>Unite  -no-split -buffer-name=files   -start-insert file_rec<cr>
-"nnoremap <leader>uf :<C-u>Unite  -no-split -buffer-name=files   -start-insert file<cr>
-"nnoremap <leader>ut :<C-u>Unite  -no-split -buffer-name=files   file<cr>
-"nnoremap <leader>uo :<C-u>Unite  -no-split -buffer-name=outline -start-insert outline<cr>
-"nnoremap <C-y>      :<C-u>Unite  -no-split -buffer-name=yank    history/yank<cr>
-"nnoremap <leader>ub :<C-u>Unite  -no-split -buffer-name=buffer  buffer<cr>
-
-"" Custom mappings for the unite buffer
-"autocmd FileType unite call s:unite_settings()
-"function! s:unite_settings()
-  "" Play nice with supertab
-  "let b:SuperTabDisabled=1
-  "" Enable navigation with control-j and control-k in insert mode
-  "imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  "imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-  "imap <buffer> <ESC>   <Plug>(unite_exit)
-"endfunction
+"pick
+nnoremap <silent> <C-t> :call PickFile()<CR>
+nnoremap <silent> <C-g> :call PickFileTab()<CR>
+nnoremap <silent> <C-b> :call PickBuffer()<CR>
+nnoremap <leader>] :call PickTag()<CR>
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
@@ -76,7 +58,6 @@ nnoremap <C-Right>  <C-w>>
 " tSlime
 let g:turbux_command_rspec = "bin/rspec"
 let g:turbux_runner  = 'tslime'
-let g:no_turbux_mappings = 1
 
 " =================================================
 " Awesome macro that promotes Rspec locals to 'lets'
@@ -158,13 +139,6 @@ nmap <Leader>s :SyntasticCheck<CR>
 "resource
 nnoremap <leader>src :source ~/.vimrc.after<cr>
 
-"pick
-nnoremap <silent> <C-p> :call PickFile()<CR>
-"nnoremap <silent> <C-s> :call PickFileSplit()<CR>
-"nnoremap <silent> <C-v> :call PickFileVerticalSplit()<CR>
-nnoremap <silent> <C-t> :call PickFileTab()<CR>
-nnoremap <silent> <C-b> :call PickBuffer()<CR>
-nnoremap <leader>] :call PickTag()<CR>
 
 "silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -179,5 +153,18 @@ nnoremap <Leader>G :Git<Space>
 nnoremap <Leader>f :Ag<Space>
 nnoremap <Leader>1 :!<Space>
 
-" nerdtree
+" Make nerdtree look nice
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:NERDTreeWinSize = 30
+" Auto open nerd tree on startup
+let g:nerdtree_tabs_open_on_gui_startup = 0
+" Focus in the main content window
+let g:nerdtree_tabs_focus_on_files = 1
+" Using controlP open the file in the default nerdtree window at launch
+let g:ctrlp_dont_split = 'NERD_tree_2'
+" Toggle NERDTree
+nmap <Leader>n :NERDTreeToggle<CR>
+" Open the project tree and expose current file in the nerdtree with Ctrl-\
 map <leader>m :NERDTreeFind<CR>
+nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
