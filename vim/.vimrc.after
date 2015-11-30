@@ -153,6 +153,11 @@ nnoremap <Leader>G :Git<Space>
 nnoremap <Leader>f :Ag<Space>
 nnoremap <Leader>1 :!<Space>
 
+" fugitive
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gl :Git l<CR>
+
 " Make nerdtree look nice
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
