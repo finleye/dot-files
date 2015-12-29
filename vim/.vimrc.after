@@ -3,6 +3,7 @@ set nocursorcolumn
 set nocursorline
 set hlsearch
 set ignorecase
+set nu
 syntax on
 syntax sync minlines=256
 set background=dark

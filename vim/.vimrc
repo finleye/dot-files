@@ -29,6 +29,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'vim-scripts/YankRing.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
