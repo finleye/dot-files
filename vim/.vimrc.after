@@ -144,6 +144,7 @@ nnoremap <leader>src :source ~/.vimrc.after<cr>
 
 "silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+nnoremap <silent> K :Ag <cword><CR>
 
 "quickfix-reflector
 let g:qf_modifiable = 1
