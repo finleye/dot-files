@@ -1,7 +1,7 @@
 # ~/.tmuxinator/Platform.yml
 
 name: Sandbox
-root: ~/Documents/sandbox
+root: $DEV/sandbox
 
 # Optional tmux socket
 # socket_name: foo
