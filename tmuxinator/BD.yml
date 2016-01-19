@@ -1,7 +1,7 @@
 # ~/.tmuxinator/Platform.yml
 
 name: BobbyDigital
-root: $DEV/BobbyDigital
+root: ~/Documents/BobbyDigital
 
 # Optional tmux socket
 # socket_name: foo

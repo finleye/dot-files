@@ -1,7 +1,7 @@
 # ~/.tmuxinator/Rza.yml
 
 name: Rza
-root: $DEV/Rza
+root: ~/Documents/Rza
 
 # Optional tmux socket
 # socket_name: foo

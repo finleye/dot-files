@@ -24,11 +24,18 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-fugitive'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'vim-scripts/YankRing.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'elixir-lang/vim-elixir'
+
+"tpope
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'terryma/vim-multiple-cursors'
 

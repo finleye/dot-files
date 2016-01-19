@@ -1,7 +1,7 @@
 # ~/.tmuxinator/Platform.yml
 
 name: Platform
-root: $DEV/contently
+root: ~/Documents/contently
 
 # Optional tmux socket
 # socket_name: foo
