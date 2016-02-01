@@ -23,7 +23,6 @@ Plugin 'stefandtw/quickfix-reflector.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'jgdavey/tslime.vim'
-Plugin 'bling/vim-airline'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'vim-scripts/YankRing.vim'
@@ -38,6 +37,8 @@ Plugin 'tpope/vim-rails'
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'terryma/vim-multiple-cursors'
+
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

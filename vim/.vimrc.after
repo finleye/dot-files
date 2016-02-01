@@ -7,9 +7,12 @@ set nu
 syntax on
 syntax sync minlines=256
 set background=dark
-let g:solarized_termcolors=16
+"let g:solarized_termcolors=16
 set t_Co=16
-colorscheme solarized
+"colorscheme solarized
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-bright
+hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 if !has("gui_running")
    let g:gruvbox_italic=0
@@ -58,7 +61,7 @@ nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
 
 " tSlime
-let g:turbux_command_rspec = "bin/rspec"
+let g:turbux_command_rspec = "rspec"
 let g:turbux_runner  = 'tslime'
 
 " =================================================
@@ -153,13 +156,19 @@ let g:qf_write_changes = 1
 
 " commandline things
 nnoremap <Leader>G :Git<Space>
-nnoremap <Leader>f :Ag<Space>
+nnoremap <Leader>f :Ag ""<left>
 nnoremap <Leader>1 :!<Space>
 
 " fugitive
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gl :Git l<CR>
+nnoremap <leader>gb :Gblame<CR>
+
+" alias capital commands
+command! Q q " Bind :Q to :q
+command! W w
+command! Wq wq
 
 " Make nerdtree look nice
 let NERDTreeMinimalUI = 1
@@ -176,3 +185,4 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 map <leader>m :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
+

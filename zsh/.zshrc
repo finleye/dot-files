@@ -5,8 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
 ZSH_THEME="agnoster"
-#ZSH_THEME="bureau"
 #ZSH_THEME="avit"
 DEFAULT_USER="coreyfinley"
 
@@ -21,16 +21,21 @@ export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
 export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 
 export PATH=$PATH:$SPARK_HOME/bin
-export PATH=./bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
-
 eval "$(rbenv init -)"
+export PATH="./bin:$PATH"
 
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
 
-plugins=(git)
-plugins=(history-substring-search colored-man colorize)
+#plugins=(git battery)
+plugins=(git battery history-substring-search colored-man colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,7 +63,7 @@ alias gf="git fetch"
 
 #rails
 alias r="rails"
-alias migrate="bin/rake db:migrate && bin/rake db:test:prepare"
+alias migrate="rake db:migrate && rake db:test:prepare && spring stop"
 
 #elstic dump
 alias edump="elasticdump --input=https://ghostFacedKilla:casHRul353v3rY7HiNgAr0undM3@a5e6a3f487180f34000.qbox.io/$2 --output=http://localhost:9200/$3 --type=$1"
@@ -83,3 +88,5 @@ alias tacocat="bin/eb deploy qa4"
 
 # added by travis gem
 [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
+
+bindkey '^B' clear-screen
