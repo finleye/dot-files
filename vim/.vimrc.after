@@ -164,6 +164,7 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gl :Git l<CR>
 nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gp :Gpush<CR>
 
 " alias capital commands
 command! Q q " Bind :Q to :q
@@ -185,4 +186,3 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 map <leader>m :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
-

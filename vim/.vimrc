@@ -29,6 +29,7 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'tpope/vim-surround'
 
 "tpope
 Plugin 'tpope/vim-fireplace'
