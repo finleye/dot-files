@@ -58,12 +58,13 @@ alias gbd="git branch -D"
 alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gri="git rebase -i"
-alias gf="git fetch"
+alias gf="git fetch --prune"
 
 
 #rails
 alias r="rails"
 alias migrate="rake db:migrate && rake db:test:prepare && spring stop"
+alias refreshdb="~/drop_db.sh"
 
 #elstic dump
 alias edump="elasticdump --input=https://ghostFacedKilla:casHRul353v3rY7HiNgAr0undM3@a5e6a3f487180f34000.qbox.io/$2 --output=http://localhost:9200/$3 --type=$1"
@@ -85,6 +86,10 @@ alias tmk="tmux kill-session -t $1"
 alias tmr="tmux rename-window $1"
 
 alias tacocat="bin/eb deploy qa4"
+
+# eb
+alias deploy="eb deploy"
+alias status="eb status"
 
 # added by travis gem
 [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh

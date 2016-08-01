@@ -135,7 +135,7 @@ set colorcolumn=80,100
 
 " rubocop
 let g:vimrubocop_keymap = 0
-let g:vimrubocop_config = '~/Documents/contently/.ruby-style.yml'
+let g:vimrubocop_config = '~/Documents/contently/.rubocop.yml'
 nmap <Leader>r :RuboCop<CR>
 
 " SyntasticCheck
