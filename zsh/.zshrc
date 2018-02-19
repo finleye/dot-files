@@ -15,6 +15,14 @@ AWS_REGION="us-east-1"
 export TERM='xterm-256color'
 export EDITOR="vim"
 
+if [[ `uname` == 'Linux' ]]; then
+  export OS=linux
+  export ZPLUG_HOME=~/.zplug
+elif [[ `uname` == 'Darwin' ]]; then
+  export OS=osx
+  export ZPLUG_HOME=/usr/local/opt/zplug
+fi
+
 #export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
 #export CXX=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/g++-4.2
 #export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
