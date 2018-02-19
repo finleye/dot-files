@@ -1,7 +1,7 @@
 # ~/.tmuxinator/colatech.yml
 
 name: colatech
-root: ~/Documents/lit-earth-2570
+root: ~/dev/lit-earth-2570
 
 # Optional tmux socket
 # socket_name: foo

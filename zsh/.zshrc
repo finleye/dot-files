@@ -10,17 +10,24 @@ ZSH_THEME="agnoster"
 #ZSH_THEME="avit"
 DEFAULT_USER="coreyfinley"
 
+AWS_REGION="us-east-1"
+
 export TERM='xterm-256color'
 export EDITOR="vim"
 
-export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
-export CXX=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/g++-4.2
-export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
+#export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
+#export CXX=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/g++-4.2
+#export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
+
+#export CC=/usr/local/Cellar/gcc48/4.8.5/bin/gcc-4.8
+#export CXX=/usr/local/Cellar/gcc48/4.8.5/bin/g++-4.8
+#export CXX=/usr/local/Cellar/gcc48/4.8.5/bin/cpp-4.8
 
 export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
 export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 
 export PATH=$PATH:$SPARK_HOME/bin
+export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
@@ -85,11 +92,21 @@ alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias tmr="tmux rename-window $1"
 
+# speak
+alias hbspeak="curl -s -H \"Content-Type: application/json\" -d '{ \"auth_token\": \"PANDAMOUSE\", \"room\" : \"tech-deployments\", \"msg\" : $2}' 'https://honeyb.herokuapp.com/speak'"
+
 alias tacocat="bin/eb deploy qa4"
 
 # eb
 alias deploy="eb deploy"
 alias status="eb status"
+
+#release
+function release {
+  local url
+  url="https://evilolive.herokuapp.com/deployed?env=$1&branch=AVAILABLE&user="
+  curl -s -d '{ \"auth_token\": \"PANDAMOUSE\" }' $url
+}
 
 # added by travis gem
 [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh

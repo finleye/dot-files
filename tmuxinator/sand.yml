@@ -1,7 +1,7 @@
 # ~/.tmuxinator/Platform.yml
 
 name: Scratchpad
-root: ~/Documents/scratchpad
+root: ~/dev/scratchpad
 
 # Optional tmux socket
 # socket_name: foo

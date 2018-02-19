@@ -2,14 +2,15 @@
 let mapleader=","
 
 " powerline
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
+"let g:Powerline_symbols = 'fancy'
+"let g:airline_powerline_fonts = 1
 set encoding=utf-8
 set guifont=Source\ Code\ Pro\ for\ Powerline "make sure to escape the spaces in the name properly
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-let g:Powerline_mode_V="V·LINE"
-let g:Powerline_mode_cv="V·BLOCK"
-let g:Powerline_mode_S="S·LINE"
-let g:Powerline_mode_cs="S·BLOCK"
+"let g:Powerline_mode_V="V·LINE"
+"let g:Powerline_mode_cv="V·BLOCK"
+"let g:Powerline_mode_S="S·LINE"
+"let g:Powerline_mode_cs="S·BLOCK"
 let g:airline#extensions#tabline#enabled = 1
+au BufRead,BufNewFile *.hamlc set ft=haml
