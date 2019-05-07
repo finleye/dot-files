@@ -26,3 +26,5 @@ windows:
         - g st
   - console:
   - server:
+  - services: cd ~/dev/local-services && docker-compose up
+

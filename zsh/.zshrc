@@ -1,13 +1,15 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+source ~/.zshrc.tokens
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="agnoster"
-#ZSH_THEME="avit"
+#ZSH_THEME="agnoster"
+ZSH_THEME="avit"
 DEFAULT_USER="coreyfinley"
 
 AWS_REGION="us-east-1"
@@ -31,19 +33,27 @@ fi
 #export CXX=/usr/local/Cellar/gcc48/4.8.5/bin/g++-4.8
 #export CXX=/usr/local/Cellar/gcc48/4.8.5/bin/cpp-4.8
 
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
+
 export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
 export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 
 export PATH=$PATH:$SPARK_HOME/bin
 export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-bright.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
+# eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 
 alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
@@ -93,12 +103,14 @@ alias bx="bundle exec"
 alias rx="rbenv exec"
 
 # tmux
+source ~/tmuxinator.zsh
 alias tx="tmuxinator"
 
 alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias tmr="tmux rename-window $1"
+alias tdir="tmux attach -c \"#{pane_current_path}\""
 
 # speak
 alias hbspeak="curl -s -H \"Content-Type: application/json\" -d '{ \"auth_token\": \"PANDAMOUSE\", \"room\" : \"tech-deployments\", \"msg\" : $2}' 'https://honeyb.herokuapp.com/speak'"
@@ -108,6 +120,10 @@ alias tacocat="bin/eb deploy qa4"
 # eb
 alias deploy="eb deploy"
 alias status="eb status"
+
+alias start-dbs="cd ~/dev/local-services && docker-compose up"
+
+alias mas-upgrade="mas outdated | cut -b 1-9 | xargs mas upgrade"
 
 #release
 function release {
@@ -119,4 +135,24 @@ function release {
 # added by travis gem
 [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
 
+
+
 bindkey '^B' clear-screen
+
+. /usr/local/opt/asdf/asdf.sh
+
+. /usr/local/etc/bash_completion.d/asdf.bash
+
+rmd () {
+  pandoc $1 | lynx -stdin
+}
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh

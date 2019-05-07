@@ -32,6 +32,9 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
+" YankRing
+nnoremap <silent> <C-y> :YRShow<CR>
+
 " Window/Tab/Split Manipulation
 "   Move between split windows by using the four directions H, L, I, N
 "   (note that  I use I and N instead of J and K because  J already does

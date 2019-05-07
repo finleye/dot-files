@@ -43,6 +43,9 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'chriskempson/base16-vim'
+Plugin 'ianks/vim-tsx'
+Plugin 'burnettk/vim-angular'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
