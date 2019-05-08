@@ -1,0 +1,63 @@
+alias aws-profile-prod="export AWS_DEFAULT_PROFILE=contently; export AWS_PROFILE=contently;"
+alias aws-profile-test="export AWS_DEFAULT_PROFILE=contently-playpen; export AWS_PROFILE=contently-playpen;"
+alias aws-profile-learn-terraform="export AWS_DEFAULT_PROFILE=learn-terraform; export AWS_PROFILE=learn-terraform;"
+alias aws-profile-clear="export AWS_DEFAULT_PROFILE=; export AWS_PROFILE=;"
+
+aws_prompt() {
+    local awsprof=$(printenv AWS_DEFAULT_PROFILE)
+
+    if [ "$awsprof" != "" ]
+        then echo " [AWS profile: $awsprof]"
+    fi
+}
+
+kubecfg_prompt() {
+    local kubecfgname=$(printenv KUBECONFIG_NAME)
+
+    if [ "$kubecfgname" != "" ]
+        then echo " [Kube Cfg: $kubecfgname]"
+    fi
+}
+
+infra_prompt() {
+  local infra_env=$(infra env get-value ENVIRONMENT)
+
+  if [ "$infra_env" != "" ]
+    then echo " [Infra: $infra_env]"
+  fi
+}
+
+function ap () {
+aws-profile-clear
+
+case "$1" in
+  prod)
+    aws-profile-prod
+    export KUBECONFIG=$HOME/.kube/config
+    export KUBECONFIG_NAME=default
+    echo "AWS profile and Kube config set to prod"
+    ;;
+  staging)
+    aws-profile-prod
+    export KUBECONFIG=$HOME/.kube/eks-cluster
+    export KUBECONFIG_NAME=eks
+    echo "AWS profile set to prod and Kube config set to staging"
+    ;;
+  test)
+    aws-profile-test
+    export KUBECONFIG=$HOME/.kube/config
+    export KUBECONFIG_NAME=default
+    echo "AWS profile set to test and Kube config set to test"
+    ;;
+  ltf)
+    aws-profile-learn-terraform
+    # not sure which kube config to load here...
+    ;;
+  *)
+    aws-profile-clear
+    unset KUBECONFIG
+    unset KUBECONFIG_NAME
+    echo "AWS profile unset"
+    ;;
+esac
+}

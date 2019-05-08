@@ -2,6 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 source ~/.zshrc.tokens
+source ~/.zshrc.ap
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -9,11 +10,13 @@ source ~/.zshrc.tokens
 # time that oh-my-zsh is loaded.
 
 #ZSH_THEME="agnoster"
-ZSH_THEME="avit"
+# ZSH_THEME="avit"
+ZSH_THEME="clean"
 DEFAULT_USER="coreyfinley"
 
 AWS_REGION="us-east-1"
 
+export INFRA_ROOT_DIR='/Users/coreyfinley/dev/infra'
 export TERM='xterm-256color'
 export EDITOR="vim"
 
@@ -101,6 +104,9 @@ alias worker:start="rake jobs:work"
 #bundler
 alias bx="bundle exec"
 alias rx="rbenv exec"
+
+#kbctl
+alias kc="kubectl"
 
 # tmux
 source ~/tmuxinator.zsh
