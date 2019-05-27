@@ -16,7 +16,7 @@ DEFAULT_USER="coreyfinley"
 
 AWS_REGION="us-east-1"
 
-export INFRA_ROOT_DIR='/Users/coreyfinley/dev/infra'
+export INFRA_ROOT_DIR='/home/cfinley/dev/infra'
 export TERM='xterm-256color'
 export EDITOR="vim"
 
@@ -44,26 +44,27 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
 export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 
-export PATH=$PATH:$SPARK_HOME/bin
 export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+
 
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 
+export PATH=$PATH:$SPARK_HOME/bin
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-# export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
-# eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
+export PATH="/home/cfinley/.local/bin:$PATH"
 
 alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
 
 #plugins=(git battery)
-plugins=(git battery history-substring-search colored-man colorize)
+# plugins=(git battery history-substring-search colored-man colorize)
+plugins=(git battery history-substring-search colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,8 +110,8 @@ alias rx="rbenv exec"
 alias kc="kubectl"
 
 # tmux
-source ~/tmuxinator.zsh
-alias tx="tmuxinator"
+# source ~/tmuxinator.zsh
+# alias tx="tmuxinator"
 
 alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
@@ -141,13 +142,7 @@ function release {
 # added by travis gem
 [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
 
-
-
 bindkey '^B' clear-screen
-
-. /usr/local/opt/asdf/asdf.sh
-
-. /usr/local/etc/bash_completion.d/asdf.bash
 
 rmd () {
   pandoc $1 | lynx -stdin
@@ -162,3 +157,9 @@ rmd () {
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+setxkbmap -option ctrl:nocaps 

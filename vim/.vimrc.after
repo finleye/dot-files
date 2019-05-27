@@ -9,9 +9,9 @@ syntax sync minlines=256
 set background=dark
 "let g:solarized_termcolors=16
 set t_Co=16
-"colorscheme solarized
+colorscheme solarized
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-bright
+" colorscheme base16-bright
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 if !has("gui_running")

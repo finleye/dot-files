@@ -12,6 +12,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ervandew/supertab'
 "Plugin 'scrooloose/nerdcommenter'
