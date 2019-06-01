@@ -40,7 +40,7 @@ conky.config = {
     use_xft = true,
     font = 'DejaVu Sans Mono:size=10',
     gap_x = 10,
-    gap_y = 20,
+    gap_y = 30,
     minimum_height = 5,
 	minimum_width = 5,
     net_avg_samples = 2,
@@ -61,8 +61,8 @@ conky.config = {
 }
 
 conky.text = [[
-
 $nodename - $sysname $kernel ($machine)
+$time
 ${color grey}Uptime:$color $uptime
 CPU Temp: ${alignr}${acpitemp}°C$color
 $stippled_hr
