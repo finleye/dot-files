@@ -12,7 +12,7 @@ source ~/.zshrc.ap
 #ZSH_THEME="agnoster"
 # ZSH_THEME="avit"
 ZSH_THEME="clean"
-DEFAULT_USER="coreyfinley"
+DEFAULT_USER="cfinley"
 
 AWS_REGION="us-east-1"
 
@@ -58,6 +58,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH="./bin:$PATH"
 export PATH="/home/cfinley/.local/bin:$PATH"
+export PATH="/home/cfinley/bin:$PATH"
 
 alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
