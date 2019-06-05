@@ -39,10 +39,11 @@ conky.config = {
     draw_shades = false,
     use_xft = true,
     font = 'DejaVu Sans Mono:size=10',
-    gap_x = 10,
-    gap_y = 30,
+    gap_x = 20,
+    gap_y = 80,
     minimum_height = 5,
-	minimum_width = 5,
+	minimum_width = 3,
+	maximum_width = 600,
     net_avg_samples = 2,
     no_buffers = true,
     out_to_console = false,
@@ -61,17 +62,20 @@ conky.config = {
 }
 
 conky.text = [[
-$nodename - $sysname $kernel ($machine)
-$time
-${color grey}Uptime:$color $uptime
-CPU Temp: ${alignr}${acpitemp}°C$color
+${alignc} $time
+${execpi 300 PYTHONIOENCODING=utf8 gcalcli --conky --nocolor agenda now tomorrow-night --military --calendar cfinley@contently.com --calendar "Corey Finley" --nostarted --config-folder ~/cal/contently }
 $stippled_hr
-CPU1: ${alignr} ${cpu cpu1}%
-CPU2: ${alignr} ${cpu cpu2}%
-CPU3: ${alignr} ${cpu cpu3}%
-CPU4: ${alignr} ${cpu cpu4}%
-${cpugraph 20}
-Load: $alignr $loadavg
+$nodename - $sysname $kernel
+${color grey}Uptime:$color $uptime
+$stippled_hr
+CPU
+Temp: ${alignr}${acpitemp}°C$color
+Load: ${alignr}${cpu cpuavg}%$color
+${cpugraph 40}
+${color white}CPU1: ${color1}${cpu cpu1}% ${cpubar cpu1 10,130}\
+${color white}${goto 320}CPU2: ${color1}${cpu cpu2}% ${cpubar cpu2 10,130}
+${color white}CPU3: ${color1}${cpu cpu3}% ${cpubar cpu3 10,130}\
+${color white}${goto 320}CPU4: ${color1}${cpu cpu4}% ${cpubar cpu4 10,130}
 Processes: $alignr $processes
 Running: $alignr $running_processes
 $stippled_hr
@@ -82,30 +86,11 @@ ${swapbar 3}
 $stippled_hr
 ${color grey}File systems:
  / $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
-${color grey}Networking:
-Up:$color ${upspeed wlp3s0} ${color grey} - Down:$color ${downspeed wlp3s0}
-
-$stippled_hr
-Network
-
-Down:
-${color gray} Speed: $alignr ${downspeed wlp3s0} k/s$color
- Tot: $alignr ${totaldown wlp3s0}
-${downspeedgraph wlp3s0 20} ${alignr}${upspeedgraph wlp3s0 20}
-Up:
-${color gray} Speed: $alignr ${upspeed wlp3s0} k/s$color
- Tot: $alignr ${totalup wlp3s0}
-${upspeedgraph wlp3s0 20} ${alignr}${upspeedgraph wlp3s0 20}
 $stippled_hr
 ${color grey}Name              PID   CPU%   MEM%
 ${color lightgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
 ${color lightgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 ${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
-$stippled_hr
-I/O
-Write: $alignr $diskio_write
-${diskiograph_write 20}
-Read: $alignr $diskio_read
-${diskiograph_read 20}
+${color lightgrey} ${top name 5} ${top pid 5} ${top cpu 5} ${top mem 5}
 ]]

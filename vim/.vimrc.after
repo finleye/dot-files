@@ -9,7 +9,7 @@ syntax sync minlines=256
 set background=dark
 "let g:solarized_termcolors=16
 set t_Co=16
-colorscheme solarized
+" colorscheme solarized
 let base16colorspace=256  " Access colors present in 256 colorspace
 " colorscheme base16-bright
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
@@ -23,7 +23,7 @@ nmap <silent> // :nohlsearch<CR>
 
 
 " using system keyboard
-vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+vmap <C-c> y:call system("xclip -i", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Set up softtabs
@@ -64,7 +64,7 @@ nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
 
 " tSlime
-let g:turbux_command_rspec = "rspec"
+let g:turbux_command_rspec = "bundle exec rspec"
 let g:turbux_runner  = 'tslime'
 
 " =================================================
