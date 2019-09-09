@@ -4,14 +4,13 @@ set nocursorline
 set hlsearch
 set ignorecase
 set nu
-syntax on
-syntax sync minlines=256
+
+filetype plugin indent on
+" syntax enable
+" syntax sync minlines=1000
 set background=dark
-"let g:solarized_termcolors=16
-set t_Co=16
-" colorscheme solarized
+" let g:solarized_termcolors=16
 let base16colorspace=256  " Access colors present in 256 colorspace
-" colorscheme base16-bright
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 if !has("gui_running")
@@ -20,11 +19,6 @@ endif
 
 " clear match buffer
 nmap <silent> // :nohlsearch<CR>
-
-
-" using system keyboard
-vmap <C-c> y:call system("xclip -i", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Set up softtabs
 set tabstop=2
@@ -134,6 +128,7 @@ nnoremap <Leader>c :SyntasticCheck<CR>
 nnoremap <Leader>R :!ctags -R<CR>
 
 " 80,100 line marker
+highlight ColorColumn ctermbg=0 guibg=grey
 set colorcolumn=80,100
 
 " rubocop
@@ -169,6 +164,8 @@ nnoremap <Leader>gl :Git l<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gp :Gpush<CR>
 
+nnoremap <leader>r :set syntax=ruby<CR>
+
 " alias capital commands
 command! Q q " Bind :Q to :q
 command! W w
@@ -189,4 +186,3 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 map <leader>m :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
-

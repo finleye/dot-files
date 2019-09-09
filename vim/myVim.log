@@ -1,0 +1,2154 @@
+
+chdir(/usr/share/vim)
+fchdir() to previous dir
+sourcing "$VIM/vimrc"
+Searching for "debian.vim" in "/home/cfinley/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/home/cfinley/.vim/after"
+Searching for "/home/cfinley/.vim/debian.vim"
+Searching for "/usr/share/vim/vimfiles/debian.vim"
+Searching for "/usr/share/vim/vim80/debian.vim"
+chdir(/usr/share/vim/vim80)
+fchdir() to previous dir
+line 10: sourcing "/usr/share/vim/vim80/debian.vim"
+finished sourcing /usr/share/vim/vim80/debian.vim
+continuing in /usr/share/vim/vimrc
+Searching for "/usr/share/vim/vimfiles/after/debian.vim"
+Searching for "/home/cfinley/.vim/after/debian.vim"
+finished sourcing $VIM/vimrc
+chdir(/home/cfinley)
+fchdir() to previous dir
+sourcing "$HOME/.vimrc"
+chdir(/home/cfinley)
+fchdir() to previous dir
+line 2: sourcing "/home/cfinley/.vimrc.before"
+finished sourcing /home/cfinley/.vimrc.before
+continuing in /home/cfinley/.vimrc
+Searching for "ftoff.vim" in "/home/cfinley/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/cfinley/.vim/after"
+Searching for "/home/cfinley/.vim/ftoff.vim"
+Searching for "/var/lib/vim/addons/ftoff.vim"
+Searching for "/usr/share/vim/vimfiles/ftoff.vim"
+Searching for "/usr/share/vim/vim80/ftoff.vim"
+chdir(/usr/share/vim/vim80)
+fchdir() to previous dir
+line 6: sourcing "/usr/share/vim/vim80/ftoff.vim"
+Error detected while processing /usr/share/vim/vim80/ftoff.vim:
+line   11:
+E216: No such group or event: filetypedetect *
+finished sourcing /usr/share/vim/vim80/ftoff.vim
+continuing in /home/cfinley/.vimrc
+Searching for "/usr/share/vim/vimfiles/after/ftoff.vim"
+Searching for "/var/lib/vim/addons/after/ftoff.vim"
+Searching for "/home/cfinley/.vim/after/ftoff.vim"
+Searching for "autoload/vundle.vim" in "/home/cfinley/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/cfinley/.vim/after,/home/cfinley/.vim/bundle/Vundle.vim"
+Searching for "/home/cfinley/.vim/autoload/vundle.vim"
+Searching for "/var/lib/vim/addons/autoload/vundle.vim"
+Searching for "/usr/share/vim/vimfiles/autoload/vundle.vim"
+Searching for "/usr/share/vim/vim80/autoload/vundle.vim"
+Searching for "/usr/share/vim/vimfiles/after/autoload/vundle.vim"
+Searching for "/var/lib/vim/addons/after/autoload/vundle.vim"
+Searching for "/home/cfinley/.vim/after/autoload/vundle.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle.vim"
+chdir(/home/cfinley/.vim/bundle/Vundle.vim/autoload)
+fchdir() to previous dir
+line 11: sourcing "/home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle.vim"
+finished sourcing /home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle.vim
+continuing in /home/cfinley/.vimrc
+Searching for "autoload/vundle/config.vim" in "/home/cfinley/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/cfinley/.vim/after,/home/cfinley/.vim/bundle/Vundle.vim"
+Searching for "/home/cfinley/.vim/autoload/vundle/config.vim"
+Searching for "/var/lib/vim/addons/autoload/vundle/config.vim"
+Searching for "/usr/share/vim/vimfiles/autoload/vundle/config.vim"
+Searching for "/usr/share/vim/vim80/autoload/vundle/config.vim"
+Searching for "/usr/share/vim/vimfiles/after/autoload/vundle/config.vim"
+Searching for "/var/lib/vim/addons/after/autoload/vundle/config.vim"
+Searching for "/home/cfinley/.vim/after/autoload/vundle/config.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle/config.vim"
+chdir(/home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle)
+fchdir() to previous dir
+line 4: sourcing "/home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle/config.vim"
+finished sourcing /home/cfinley/.vim/bundle/Vundle.vim/autoload/vundle/config.vim
+continuing in function vundle#begin[2]..vundle#rc
+Searching for "filetype.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundle/b
+Searching for "/home/cfinley/.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/filetype.vim"
+Searching for "/var/lib/vim/addons/filetype.vim"
+Searching for "/usr/share/vim/vimfiles/filetype.vim"
+Searching for "/usr/share/vim/vim80/filetype.vim"
+chdir(/usr/share/vim/vim80)
+fchdir() to previous dir
+line 45: sourcing "/usr/share/vim/vim80/filetype.vim"
+Searching for "ftdetect/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundle
+Searching for "/home/cfinley/.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftdetect/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-ruby/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/vim-ruby/ftdetect/ruby.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/ftdetect/ruby.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+chdir(/home/cfinley/.vim/bundle/vim-ruby/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/vim-ruby/ftdetect/ruby_extra.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/ftdetect/ruby_extra.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftdetect/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-fugitive/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/vim-fugitive/ftdetect/fugitive.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-fugitive/ftdetect/fugitive.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftdetect/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-coffee-script/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+chdir(/home/cfinley/.vim/bundle/vim-coffee-script/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-coffee-script/ftdetect/vim-literate-coffeescript.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftdetect/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-tsx/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/vim-tsx/ftdetect/typescript.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-tsx/ftdetect/typescript.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftdetect/*.vim"
+chdir(/home/cfinley/.vim/bundle/typescript-vim/ftdetect)
+fchdir() to previous dir
+line 2751: sourcing "/home/cfinley/.vim/bundle/typescript-vim/ftdetect/typescript.vim"
+finished sourcing /home/cfinley/.vim/bundle/typescript-vim/ftdetect/typescript.vim
+continuing in /usr/share/vim/vim80/filetype.vim
+Searching for "/var/lib/vim/addons/ftdetect/*.vim"
+Searching for "/usr/share/vim/vimfiles/ftdetect/*.vim"
+Searching for "/usr/share/vim/vim80/ftdetect/*.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftdetect/*.vim"
+Searching for "/var/lib/vim/addons/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftdetect/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftdetect/*.vim"
+finished sourcing /usr/share/vim/vim80/filetype.vim
+continuing in /home/cfinley/.vimrc
+Searching for "/usr/share/vim/vimfiles/after/filetype.vim"
+Searching for "/var/lib/vim/addons/after/filetype.vim"
+Searching for "/home/cfinley/.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/filetype.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/filetype.vim"
+Searching for "ftplugin.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundle/b
+Searching for "/home/cfinley/.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin.vim"
+Searching for "/var/lib/vim/addons/ftplugin.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin.vim"
+Searching for "/usr/share/vim/vim80/ftplugin.vim"
+chdir(/usr/share/vim/vim80)
+fchdir() to previous dir
+line 45: sourcing "/usr/share/vim/vim80/ftplugin.vim"
+finished sourcing /usr/share/vim/vim80/ftplugin.vim
+continuing in /home/cfinley/.vimrc
+Searching for "/usr/share/vim/vimfiles/after/ftplugin.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin.vim"
+Searching for "indent.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundle/bas
+Searching for "/home/cfinley/.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/indent.vim"
+Searching for "/var/lib/vim/addons/indent.vim"
+Searching for "/usr/share/vim/vimfiles/indent.vim"
+Searching for "/usr/share/vim/vim80/indent.vim"
+chdir(/usr/share/vim/vim80)
+fchdir() to previous dir
+line 45: sourcing "/usr/share/vim/vim80/indent.vim"
+finished sourcing /usr/share/vim/vim80/indent.vim
+continuing in /home/cfinley/.vimrc
+Searching for "/usr/share/vim/vimfiles/after/indent.vim"
+Searching for "/var/lib/vim/addons/after/indent.vim"
+Searching for "/home/cfinley/.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/indent.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/indent.vim"
+chdir(/home/cfinley)
+fchdir() to previous dir
+line 59: sourcing "/home/cfinley/.vimrc.after"
+chdir(/usr/share/vim/vim80/syntax)
+fchdir() to previous dir
+line 8: sourcing "/usr/share/vim/vim80/syntax/syntax.vim"
+Searching for "syntax/synload.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bu
+Searching for "/home/cfinley/.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/syntax/synload.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/syntax/synload.vim"
+Searching for "/var/lib/vim/addons/syntax/synload.vim"
+Searching for "/usr/share/vim/vimfiles/syntax/synload.vim"
+Searching for "/usr/share/vim/vim80/syntax/synload.vim"
+chdir(/usr/share/vim/vim80/syntax)
+fchdir() to previous dir
+line 19: sourcing "/usr/share/vim/vim80/syntax/synload.vim"
+Searching for "syntax/syncolor.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/b
+Searching for "/home/cfinley/.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/syntax/syncolor.vim"
+Searching for "/var/lib/vim/addons/syntax/syncolor.vim"
+Searching for "/usr/share/vim/vimfiles/syntax/syncolor.vim"
+Searching for "/usr/share/vim/vim80/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim80/syntax)
+fchdir() to previous dir
+line 21: sourcing "/usr/share/vim/vim80/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+continuing in /usr/share/vim/vim80/syntax/synload.vim
+Searching for "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"
+Searching for "/var/lib/vim/addons/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim80/syntax/synload.vim
+continuing in /usr/share/vim/vim80/syntax/syntax.vim
+finished sourcing /usr/share/vim/vim80/syntax/syntax.vim
+continuing in /home/cfinley/.vimrc.after
+Searching for "syntax/syncolor.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/b
+Searching for "/home/cfinley/.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/syntax/syncolor.vim"
+Searching for "/var/lib/vim/addons/syntax/syncolor.vim"
+Searching for "/usr/share/vim/vimfiles/syntax/syncolor.vim"
+Searching for "/usr/share/vim/vim80/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim80/syntax)
+fchdir() to previous dir
+line 10: sourcing "/usr/share/vim/vim80/syntax/syncolor.vim"
+finished sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+continuing in /home/cfinley/.vimrc.after
+Searching for "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"
+Searching for "/var/lib/vim/addons/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/syntax/syncolor.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/syntax/syncolor.vim"
+finished sourcing /home/cfinley/.vimrc.after
+continuing in /home/cfinley/.vimrc
+finished sourcing $HOME/.vimrc
+Searching for "plugin/**/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundl
+Searching for "/home/cfinley/.vim/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/nerdtree/plugin/NERD_tree.vim"
+Searching for "autoload/nerdtree.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim
+Searching for "/home/cfinley/.vim/autoload/nerdtree.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/nerdtree.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/autoload)
+fchdir() to previous dir
+line 73: sourcing "/home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree.vim
+continuing in /home/cfinley/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+Searching for "lib/nerdtree/path.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim
+Searching for "/home/cfinley/.vim/lib/nerdtree/path.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/path.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/path.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 1: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/path.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/menu_controller.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/c
+Searching for "/home/cfinley/.vim/lib/nerdtree/menu_controller.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/menu_controller.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 2: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/menu_item.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley
+Searching for "/home/cfinley/.vim/lib/nerdtree/menu_item.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/menu_item.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 3: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/key_map.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.
+Searching for "/home/cfinley/.vim/lib/nerdtree/key_map.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/key_map.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 4: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/bookmark.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/
+Searching for "/home/cfinley/.vim/lib/nerdtree/bookmark.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/bookmark.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 5: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/tree_file_node.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cf
+Searching for "/home/cfinley/.vim/lib/nerdtree/tree_file_node.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/tree_file_node.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 6: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/tree_dir_node.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfi
+Searching for "/home/cfinley/.vim/lib/nerdtree/tree_dir_node.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/tree_dir_node.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 7: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/opener.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.v
+Searching for "/home/cfinley/.vim/lib/nerdtree/opener.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/opener.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/opener.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 8: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/opener.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/creator.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.
+Searching for "/home/cfinley/.vim/lib/nerdtree/creator.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/creator.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/creator.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 9: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/creator.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/flag_set.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/
+Searching for "/home/cfinley/.vim/lib/nerdtree/flag_set.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/flag_set.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/flag_set.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 10: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/flag_set.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/flag_set.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/nerdtree.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/
+Searching for "/home/cfinley/.vim/lib/nerdtree/nerdtree.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/nerdtree.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/nerdtree.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 11: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/nerdtree.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/nerdtree.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/ui.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/b
+Searching for "/home/cfinley/.vim/lib/nerdtree/ui.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/ui.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/ui.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 12: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/ui.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/ui.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/event.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vi
+Searching for "/home/cfinley/.vim/lib/nerdtree/event.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/event.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/event.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 13: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/event.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/event.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "lib/nerdtree/notifier.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/
+Searching for "/home/cfinley/.vim/lib/nerdtree/notifier.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/lib/nerdtree/notifier.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/notifier.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree)
+fchdir() to previous dir
+line 14: sourcing "/home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/notifier.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/lib/nerdtree/notifier.vim
+continuing in function nerdtree#loadClassFiles
+Searching for "autoload/nerdtree/ui_glue.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfin
+Searching for "/home/cfinley/.vim/autoload/nerdtree/ui_glue.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/nerdtree/ui_glue.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree/ui_glue.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree)
+fchdir() to previous dir
+line 166: sourcing "/home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree/ui_glue.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/autoload/nerdtree/ui_glue.vim
+continuing in /home/cfinley/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+Searching for "nerdtree_plugin/**/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.
+Searching for "/home/cfinley/.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+continuing in function nerdtree#postSourceActions
+chdir(/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+continuing in function nerdtree#postSourceActions
+chdir(/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/vcs.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/nerdtree_plugin/vcs.vim
+continuing in function nerdtree#postSourceActions
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin)
+fchdir() to previous dir
+line 5: sourcing "/home/cfinley/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
+continuing in function nerdtree#postSourceActions
+Searching for "/home/cfinley/.vim/bundle/supertab/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/nerdtree_plugin/**/*.vim"
+Searching for "/var/lib/vim/addons/nerdtree_plugin/**/*.vim"
+Searching for "/usr/share/vim/vimfiles/nerdtree_plugin/**/*.vim"
+Searching for "/usr/share/vim/vim80/nerdtree_plugin/**/*.vim"
+Searching for "/usr/share/vim/vimfiles/after/nerdtree_plugin/**/*.vim"
+Searching for "/var/lib/vim/addons/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/nerdtree_plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/nerdtree_plugin/**/*.vim"
+finished sourcing /home/cfinley/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/supertab/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/supertab/plugin/supertab.vim"
+finished sourcing /home/cfinley/.vim/bundle/supertab/plugin/supertab.vim
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-trailing-whitespace/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-trailing-whitespace/plugin/trailing-whitespace.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-trailing-whitespace/plugin/trailing-whitespace.vim
+Searching for "/home/cfinley/.vim/bundle/ag.vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/ag.vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/ag.vim/plugin/ag.vim"
+finished sourcing /home/cfinley/.vim/bundle/ag.vim/plugin/ag.vim
+Searching for "/home/cfinley/.vim/bundle/pick.vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/pick.vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/pick.vim/plugin/pick.vim"
+finished sourcing /home/cfinley/.vim/bundle/pick.vim/plugin/pick.vim
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/quickfix-reflector.vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/quickfix-reflector.vim/plugin/quickfix-reflector.vim"
+finished sourcing /home/cfinley/.vim/bundle/quickfix-reflector.vim/plugin/quickfix-reflector.vim
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/splitjoin.vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/splitjoin.vim/plugin/splitjoin.vim"
+Searching for "autoload/sj/settings.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.
+Searching for "/home/cfinley/.vim/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/autoload/sj/settings.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/sj/settings.vim"
+chdir(/home/cfinley/.vim/bundle/splitjoin.vim/autoload/sj)
+fchdir() to previous dir
+line 12: sourcing "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/sj/settings.vim"
+finished sourcing /home/cfinley/.vim/bundle/splitjoin.vim/autoload/sj/settings.vim
+continuing in /home/cfinley/.vim/bundle/splitjoin.vim/plugin/splitjoin.vim
+finished sourcing /home/cfinley/.vim/bundle/splitjoin.vim/plugin/splitjoin.vim
+Searching for "/home/cfinley/.vim/bundle/tabular/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/tabular/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/tabular/plugin/Tabular.vim"
+finished sourcing /home/cfinley/.vim/bundle/tabular/plugin/Tabular.vim
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/tslime.vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/tslime.vim/plugin/tslime.vim"
+finished sourcing /home/cfinley/.vim/bundle/tslime.vim/plugin/tslime.vim
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-turbux/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-turbux/plugin/turbux.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-turbux/plugin/turbux.vim
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/YankRing.vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/YankRing.vim/plugin/yankring.vim"
+finished sourcing /home/cfinley/.vim/bundle/YankRing.vim/plugin/yankring.vim
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-tmux-navigator/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-tmux-navigator/plugin/tmux_navigator.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-tmux-navigator/plugin/tmux_navigator.vim
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/tcomment_vim/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/tcomment_vim/plugin/tcomment.vim"
+Searching for "autoload/tcomment/deprecated.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/c
+Searching for "/home/cfinley/.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/autoload/tcomment/deprecated.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/autoload/tcomment/deprecated.vim"
+chdir(/home/cfinley/.vim/bundle/tcomment_vim/autoload/tcomment)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/tcomment_vim/autoload/tcomment/deprecated.vim"
+finished sourcing /home/cfinley/.vim/bundle/tcomment_vim/autoload/tcomment/deprecated.vim
+continuing in /home/cfinley/.vim/bundle/tcomment_vim/plugin/tcomment.vim
+finished sourcing /home/cfinley/.vim/bundle/tcomment_vim/plugin/tcomment.vim
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-rspec/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-rspec/plugin/rspec.vim"
+Searching for "autoload/rspec.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bu
+Searching for "/home/cfinley/.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/autoload/rspec.vim"
+Searching for "/var/lib/vim/addons/autoload/rspec.vim"
+Searching for "/usr/share/vim/vimfiles/autoload/rspec.vim"
+Searching for "/usr/share/vim/vim80/autoload/rspec.vim"
+Searching for "/usr/share/vim/vimfiles/after/autoload/rspec.vim"
+Searching for "/var/lib/vim/addons/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/autoload/rspec.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/autoload/rspec.vim"
+not found in 'runtimepath': "autoload/rspec.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-rspec/plugin/rspec.vim
+Searching for "/home/cfinley/.vim/bundle/vim-surround/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-surround/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-surround/plugin/surround.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-surround/plugin/surround.vim
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-fireplace/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-fireplace/plugin/fireplace.vim"
+Searching for "autoload/fireplace.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vi
+Searching for "/home/cfinley/.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/autoload/fireplace.vim"
+Searching for "/var/lib/vim/addons/autoload/fireplace.vim"
+Searching for "/usr/share/vim/vimfiles/autoload/fireplace.vim"
+Searching for "/usr/share/vim/vim80/autoload/fireplace.vim"
+Searching for "/usr/share/vim/vimfiles/after/autoload/fireplace.vim"
+Searching for "/var/lib/vim/addons/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/autoload/fireplace.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/autoload/fireplace.vim"
+not found in 'runtimepath': "autoload/fireplace.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-fireplace/plugin/fireplace.vim
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-fugitive/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-fugitive/plugin/fugitive.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-endwise/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-endwise/plugin/endwise.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-endwise/plugin/endwise.vim
+Searching for "/home/cfinley/.vim/bundle/vim-rails/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-rails/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/vim-rails/plugin/rails.vim"
+Searching for "plugin/projectionist.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.
+Searching for "/home/cfinley/.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/plugin/projectionist.vim"
+Searching for "/var/lib/vim/addons/plugin/projectionist.vim"
+Searching for "/usr/share/vim/vimfiles/plugin/projectionist.vim"
+Searching for "/usr/share/vim/vim80/plugin/projectionist.vim"
+Searching for "/usr/share/vim/vimfiles/after/plugin/projectionist.vim"
+Searching for "/var/lib/vim/addons/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/plugin/projectionist.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/plugin/projectionist.vim"
+not found in 'runtimepath': "plugin/projectionist.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-rails/plugin/rails.vim
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/plugin/**/*.vim"
+Searching for "/var/lib/vim/addons/plugin/**/*.vim"
+Searching for "/usr/share/vim/vimfiles/plugin/**/*.vim"
+Searching for "/usr/share/vim/vim80/plugin/**/*.vim"
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/getscriptPlugin.vim"
+finished sourcing /usr/share/vim/vim80/plugin/getscriptPlugin.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/gzip.vim"
+finished sourcing /usr/share/vim/vim80/plugin/gzip.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/logiPat.vim"
+finished sourcing /usr/share/vim/vim80/plugin/logiPat.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/manpager.vim"
+finished sourcing /usr/share/vim/vim80/plugin/manpager.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/matchparen.vim"
+finished sourcing /usr/share/vim/vim80/plugin/matchparen.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/netrwPlugin.vim"
+finished sourcing /usr/share/vim/vim80/plugin/netrwPlugin.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/rrhelper.vim"
+finished sourcing /usr/share/vim/vim80/plugin/rrhelper.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/spellfile.vim"
+finished sourcing /usr/share/vim/vim80/plugin/spellfile.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/tarPlugin.vim"
+finished sourcing /usr/share/vim/vim80/plugin/tarPlugin.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/tohtml.vim"
+finished sourcing /usr/share/vim/vim80/plugin/tohtml.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/vimballPlugin.vim"
+finished sourcing /usr/share/vim/vim80/plugin/vimballPlugin.vim
+chdir(/usr/share/vim/vim80/plugin)
+fchdir() to previous dir
+sourcing "/usr/share/vim/vim80/plugin/zipPlugin.vim"
+finished sourcing /usr/share/vim/vim80/plugin/zipPlugin.vim
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/plugin/**/*.vim"
+Searching for "pack/*/start/*" in "/home/cfinley/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/home/cfinley/.vim/after"
+Searching for "/home/cfinley/.vim/pack/*/start/*"
+Searching for "/usr/share/vim/vimfiles/pack/*/start/*"
+Searching for "/usr/share/vim/vim80/pack/*/start/*"
+Searching for "/usr/share/vim/vimfiles/after/pack/*/start/*"
+Searching for "/home/cfinley/.vim/after/pack/*/start/*"
+not found in 'packpath': "pack/*/start/*"
+Searching for "pack/*/start/*" in "/home/cfinley/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/home/cfinley/.vim/after"
+Searching for "/home/cfinley/.vim/pack/*/start/*"
+Searching for "/usr/share/vim/vimfiles/pack/*/start/*"
+Searching for "/usr/share/vim/vim80/pack/*/start/*"
+Searching for "/usr/share/vim/vimfiles/after/pack/*/start/*"
+Searching for "/home/cfinley/.vim/after/pack/*/start/*"
+not found in 'packpath': "pack/*/start/*"
+Searching for "plugin/**/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundl
+Searching for "/usr/share/vim/vimfiles/after/plugin/**/*.vim"
+Searching for "/var/lib/vim/addons/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/plugin/**/*.vim"
+chdir(/home/cfinley/.vim/bundle/tabular/after/plugin)
+fchdir() to previous dir
+sourcing "/home/cfinley/.vim/bundle/tabular/after/plugin/TabularMaps.vim"
+Searching for "autoload/tabular.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/
+Searching for "/home/cfinley/.vim/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/tabular.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/autoload/tabular.vim"
+chdir(/home/cfinley/.vim/bundle/tabular/autoload)
+fchdir() to previous dir
+line 5: sourcing "/home/cfinley/.vim/bundle/tabular/autoload/tabular.vim"
+finished sourcing /home/cfinley/.vim/bundle/tabular/autoload/tabular.vim
+continuing in function AddTabularPattern[7]..<SNR>50_ParsePattern
+finished sourcing /home/cfinley/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/plugin/**/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/plugin/**/*.vim"
+Reading viminfo file "/home/cfinley/.viminfo" info oldfiles
+"class.rb" 
+"class.rb" 5L, 60C
+Reading viminfo file "/home/cfinley/.viminfo" marks
+Executing BufRead Auto commands for "*.rb"
+autocommand setf ruby
+
+Executing FileType Auto commands for "*"
+autocommand call s:LoadFTPlugin()
+
+Searching for "ftplugin/ruby.vim ftplugin/ruby_*.vim ftplugin/ruby/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/
+Searching for "/home/cfinley/.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby/*.vim"
+chdir(/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby/splitjoin.vim"
+finished sourcing /home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby/splitjoin.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby.vim"
+chdir(/home/cfinley/.vim/bundle/vim-ruby/ftplugin)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby.vim"
+chdir(/home/cfinley)
+/home/cfinley
+Calling shell to execute: "(env PATH='/home/cfinley/.asdf/shims:/home/cfinley/.asdf/bin:/home/cfinley/bin:/home/cfinley/.local/bin:./bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin' ruby --disable-gems -e 'print $:.join %q{,}') >/tmp/vPPGGt7/6 2>&1"
+chdir(/home/cfinley/dot-files/vim)
+/home/cfinley/dot-files/vim
+chdir(/home/cfinley/dot-files/vim)
+/home/cfinley/dot-files/vim
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin/ruby/*.vim"
+Searching for "/var/lib/vim/addons/ftplugin/ruby.vim"
+Searching for "/var/lib/vim/addons/ftplugin/ruby_*.vim"
+Searching for "/var/lib/vim/addons/ftplugin/ruby/*.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin/ruby_*.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin/ruby/*.vim"
+Searching for "/usr/share/vim/vim80/ftplugin/ruby.vim"
+chdir(/usr/share/vim/vim80/ftplugin)
+fchdir() to previous dir
+line 17: sourcing "/usr/share/vim/vim80/ftplugin/ruby.vim"
+finished sourcing /usr/share/vim/vim80/ftplugin/ruby.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/usr/share/vim/vim80/ftplugin/ruby_*.vim"
+Searching for "/usr/share/vim/vim80/ftplugin/ruby/*.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftplugin/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftplugin/ruby_*.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftplugin/ruby/*.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin/ruby.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin/ruby_*.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby/rails.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby/rails.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin/ruby/*.vim"
+Executing FileType Auto commands for "*"
+autocommand call s:LoadIndent()
+
+Searching for "indent/ruby.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundl
+Searching for "/home/cfinley/.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/indent/ruby.vim"
+chdir(/home/cfinley/.vim/bundle/vim-ruby/indent)
+fchdir() to previous dir
+line 14: sourcing "/home/cfinley/.vim/bundle/vim-ruby/indent/ruby.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/indent/ruby.vim
+continuing in function <SNR>17_LoadIndent
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/indent/ruby.vim"
+Searching for "/var/lib/vim/addons/indent/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/indent/ruby.vim"
+Searching for "/usr/share/vim/vim80/indent/ruby.vim"
+chdir(/usr/share/vim/vim80/indent)
+fchdir() to previous dir
+line 14: sourcing "/usr/share/vim/vim80/indent/ruby.vim"
+finished sourcing /usr/share/vim/vim80/indent/ruby.vim
+continuing in function <SNR>17_LoadIndent
+Searching for "/usr/share/vim/vimfiles/after/indent/ruby.vim"
+Searching for "/var/lib/vim/addons/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/indent/ruby.vim"
+Executing FileType Auto commands for "*"
+autocommand exe "set syntax=" . expand("<amatch>")
+
+Executing Syntax Auto commands for "*"
+autocommand call s:SynSet()
+
+Searching for "syntax/ruby.vim syntax/ruby/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/
+Searching for "/home/cfinley/.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/syntax/ruby.vim"
+chdir(/home/cfinley/.vim/bundle/vim-ruby/syntax)
+fchdir() to previous dir
+line 24: sourcing "/home/cfinley/.vim/bundle/vim-ruby/syntax/ruby.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/syntax/ruby.vim
+continuing in function <SNR>20_SynSet
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/syntax/ruby/*.vim"
+Searching for "/var/lib/vim/addons/syntax/ruby.vim"
+Searching for "/var/lib/vim/addons/syntax/ruby/*.vim"
+Searching for "/usr/share/vim/vimfiles/syntax/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/syntax/ruby/*.vim"
+Searching for "/usr/share/vim/vim80/syntax/ruby.vim"
+chdir(/usr/share/vim/vim80/syntax)
+fchdir() to previous dir
+line 24: sourcing "/usr/share/vim/vim80/syntax/ruby.vim"
+finished sourcing /usr/share/vim/vim80/syntax/ruby.vim
+continuing in function <SNR>20_SynSet
+Searching for "/usr/share/vim/vim80/syntax/ruby/*.vim"
+Searching for "/usr/share/vim/vimfiles/after/syntax/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/after/syntax/ruby/*.vim"
+Searching for "/var/lib/vim/addons/after/syntax/ruby.vim"
+Searching for "/var/lib/vim/addons/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/syntax/ruby/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-rails/after/syntax/ruby)
+fchdir() to previous dir
+line 24: sourcing "/home/cfinley/.vim/bundle/vim-rails/after/syntax/ruby/rails.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-rails/after/syntax/ruby/rails.vim
+continuing in function <SNR>20_SynSet
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/syntax/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/syntax/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/syntax/ruby/*.vim"
+Executing FileType Auto commands for "ruby"
+autocommand let b:endwise_addition = 'end' | let b:endwise_words = 'module,class,def,if,unless,case,while,until,begin,do' | let b:endwise_pattern = '^\(.*=\)\?\s*\%(private\s\+\|protected\s\+\|public\s\+\|module_function\s\+\)*\zs\%(module\|class\|def\|if\|unless\|case\|while\|until\|for\|\|begin\)\>\%(.*[^.:@$]\<end\>\)\@!\|\<do\ze\%(\s*|.*|\)\=\s*$' | let b:endwise_syngroups = 'rubyModule,rubyClass,rubyDefine,rubyControl,rubyConditional,rubyRepeat'
+
+Executing FileType Auto commands for "*"
+autocommand call s:abbrev()
+
+Executing FileType Auto commands for "*"
+autocommand if RailsDetect() | call rails#buffer_setup() | endif
+
+Executing BufRead Auto commands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+Executing BufRead Auto commands for "*.rb"
+autocommand call s:setf('ruby')
+
+Executing BufRead Auto commands for "*"
+autocommand call s:DetectCoffee()
+
+Executing BufRead Auto commands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (getline(1) =~ '^#' || getline(2) =~ '^#' || getline(3) =~ '^#'^I|| getline(4) =~ '^#' || getline(5) =~ '^#') |   setf conf | endif
+
+Executing BufRead Auto commands for "*.rb"
+autocommand set syntax=ruby
+
+Executing BufRead Auto commands for "*"
+autocommand if ShouldMatchWhitespace() | match ExtraWhitespace /\\\@<![\u3000[:space:]]\+$/ | else | match ExtraWhitespace /^^/ | endif
+
+Executing BufRead Auto commands for "*"
+autocommand if has_key(s:qffiles, expand('<amatch>:p')) |   call s:set_up_historical() | endif
+
+Executing BufRead Auto commands for "*"
+autocommand call FugitiveDetect(expand('<amatch>:p'))
+
+Searching for "autoload/fugitive.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim
+Searching for "/home/cfinley/.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/autoload/fugitive.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/autoload/fugitive.vim"
+chdir(/home/cfinley/.vim/bundle/vim-fugitive/autoload)
+fchdir() to previous dir
+line 11: sourcing "/home/cfinley/.vim/bundle/vim-fugitive/autoload/fugitive.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-fugitive/autoload/fugitive.vim
+continuing in function FugitiveDetect
+Executing User Auto commands for "Fugitive"
+autocommand if s:DirCommitFile(@%)[1] =~# '^0\=$' | exe "command! -buffer -bar -bang -nargs=1 -complete=customlist,fugitive#CompletePath Gmove :execute s:Move(<bang>0,0,<q-args>)" | exe "command! -buffer -bar -bang -nargs=1 -complete=customlist,s:RenameComplete Grename :execute s:Move(<bang>0,1,<q-args>)" | exe "command! -buffer -bar -bang Gremove :execute s:Remove('edit',<bang>0)" | exe "command! -buffer -bar -bang Gdelete :execute s:Remove('bdelete',<bang>0)" | endif
+
+Executing User Auto commands for "Fugitive"
+autocommand if get(b:, 'fugitive_type') =~# '^\%(file\|blob\|blame\)$' || filereadable(@%) |   exe "command! -buffer -bar -bang -range=0 -nargs=* Gblame :execute s:BlameCommand(<line1>,<line2>,+'<range>',<count>,<bang>0,'<mods>',<q-reg>,<q-args>,[<f-args>])" | endif
+
+Executing User Auto commands for "Fugitive"
+autocommand if &filetype =~# '^git\%(commit\)\=$' && &foldtext ==# 'foldtext()' |    set foldtext=fugitive#Foldtext() | endif
+
+Executing BufRead Auto commands for "*"
+autocommand if RailsDetect(expand("<afile>:p")) && empty(&filetype) |   call rails#buffer_setup() | endif
+
+Executing BufWinEnter Auto commands for "*"
+autocommand if s:can_diffoff(+expand('<abuf>')) && s:diff_window_count() == 1 |   call s:diffoff() | endif
+
+Executing BufEnter Auto commands for "*"
+autocommand call nerdtree#checkForBrowse(expand("<amatch>"))
+
+Executing BufEnter Auto commands for "*"
+autocommand sil call s:LocalBrowse(expand("<amatch>"))
+
+Executing BufEnter Auto commands for "*"
+autocommand if exists('s:rebase_continue') |   exe s:Merge('rebase', 0, '', getfsize(fugitive#Find('.git/rebase-merge/git-rebase-todo', s:rebase_continue)) > 0 ? '--continue' : '--abort', remove(s:, 'rebase_continue')) | endif
+
+Executing VimEnter Auto commands for "*"
+autocommand silent! autocmd! FileExplorer
+
+autocommand call nerdtree#checkForBrowse(expand("<amatch>"))
+
+Executing VimEnter Auto commands for "*"
+autocommand :if has('clipboard') | call <SID>YRFocusGained() | endif
+
+Executing VimEnter Auto commands for "*"
+autocommand if empty(expand('<amatch>'))|call FugitiveDetect(getcwd())|endif
+
+Executing VimEnter Auto commands for "*"
+autocommand if empty(expand("<amatch>")) && RailsDetect(getcwd()) |   call rails#buffer_setup() |   call s:doau_user('BufEnterRails') | endif
+
+Executing VimEnter Auto commands for "*"
+autocommand call s:abolish_setup()
+
+Executing CursorMoved Auto commands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+
+chdir(/home/cfinley/dot-files/vim)
+fchdir() to previous dir
+                        "class.rb" 
+"class.rb" 5L, 60C
+Executing BufRead Auto commands for "*.rb"
+autocommand setf ruby
+
+Executing BufRead Auto commands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+Executing BufRead Auto commands for "*.rb"
+autocommand call s:setf('ruby')
+
+Executing BufRead Auto commands for "*"
+autocommand call s:DetectCoffee()
+
+Executing BufRead Auto commands for "*"
+autocommand if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (getline(1) =~ '^#' || getline(2) =~ '^#' || getline(3) =~ '^#'^I|| getline(4) =~ '^#' || getline(5) =~ '^#') |   setf conf | endif
+
+Executing BufRead Auto commands for "*.rb"
+autocommand set syntax=ruby
+
+Executing BufRead Auto commands for "*"
+autocommand if ShouldMatchWhitespace() | match ExtraWhitespace /\\\@<![\u3000[:space:]]\+$/ | else | match ExtraWhitespace /^^/ | endif
+
+Executing BufRead Auto commands for "*"
+autocommand if has_key(s:qffiles, expand('<amatch>:p')) |   call s:set_up_historical() | endif
+
+Executing BufRead Auto commands for "*"
+autocommand call FugitiveDetect(expand('<amatch>:p'))
+
+Executing User Auto commands for "Fugitive"
+autocommand if s:DirCommitFile(@%)[1] =~# '^0\=$' | exe "command! -buffer -bar -bang -nargs=1 -complete=customlist,fugitive#CompletePath Gmove :execute s:Move(<bang>0,0,<q-args>)" | exe "command! -buffer -bar -bang -nargs=1 -complete=customlist,s:RenameComplete Grename :execute s:Move(<bang>0,1,<q-args>)" | exe "command! -buffer -bar -bang Gremove :execute s:Remove('edit',<bang>0)" | exe "command! -buffer -bar -bang Gdelete :execute s:Remove('bdelete',<bang>0)" | endif
+
+Executing User Auto commands for "Fugitive"
+autocommand if get(b:, 'fugitive_type') =~# '^\%(file\|blob\|blame\)$' || filereadable(@%) |   exe "command! -buffer -bar -bang -range=0 -nargs=* Gblame :execute s:BlameCommand(<line1>,<line2>,+'<range>',<count>,<bang>0,'<mods>',<q-reg>,<q-args>,[<f-args>])" | endif
+
+Executing User Auto commands for "Fugitive"
+autocommand if &filetype =~# '^git\%(commit\)\=$' && &foldtext ==# 'foldtext()' |    set foldtext=fugitive#Foldtext() | endif
+
+Executing BufRead Auto commands for "*"
+autocommand if RailsDetect(expand("<afile>:p")) && empty(&filetype) |   call rails#buffer_setup() | endif
+
+Executing BufRead Auto commands for "*"
+autocommand exe s:SetupTemp(expand('<amatch>:p'))
+
+Executing FileType Auto commands for "*"
+autocommand call s:LoadFTPlugin()
+
+Searching for "ftplugin/ruby.vim ftplugin/ruby_*.vim ftplugin/ruby/*.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/
+Searching for "/home/cfinley/.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby/*.vim"
+chdir(/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby/splitjoin.vim"
+finished sourcing /home/cfinley/.vim/bundle/splitjoin.vim/ftplugin/ruby/splitjoin.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby.vim"
+chdir(/home/cfinley/.vim/bundle/vim-ruby/ftplugin)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/ftplugin/ruby/*.vim"
+Searching for "/var/lib/vim/addons/ftplugin/ruby.vim"
+Searching for "/var/lib/vim/addons/ftplugin/ruby_*.vim"
+Searching for "/var/lib/vim/addons/ftplugin/ruby/*.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin/ruby_*.vim"
+Searching for "/usr/share/vim/vimfiles/ftplugin/ruby/*.vim"
+Searching for "/usr/share/vim/vim80/ftplugin/ruby.vim"
+chdir(/usr/share/vim/vim80/ftplugin)
+fchdir() to previous dir
+line 17: sourcing "/usr/share/vim/vim80/ftplugin/ruby.vim"
+finished sourcing /usr/share/vim/vim80/ftplugin/ruby.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/usr/share/vim/vim80/ftplugin/ruby_*.vim"
+Searching for "/usr/share/vim/vim80/ftplugin/ruby/*.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftplugin/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftplugin/ruby_*.vim"
+Searching for "/usr/share/vim/vimfiles/after/ftplugin/ruby/*.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin/ruby.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin/ruby_*.vim"
+Searching for "/var/lib/vim/addons/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby/*.vim"
+chdir(/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby)
+fchdir() to previous dir
+line 17: sourcing "/home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby/rails.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-rails/after/ftplugin/ruby/rails.vim
+continuing in function <SNR>16_LoadFTPlugin
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/ftplugin/ruby/*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin/ruby_*.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/ftplugin/ruby/*.vim"
+Executing FileType Auto commands for "*"
+autocommand call s:LoadIndent()
+
+Searching for "indent/ruby.vim" in "/home/cfinley/.vim,/home/cfinley/.vim/bundle/Vundle.vim,/home/cfinley/.vim/bundle/nerdtree,/home/cfinley/.vim/bundle/vim-colors-solarized,/home/cfinley/.vim/bundle/nerdtree-git-plugin,/home/cfinley/.vim/bundle/supertab,/home/cfinley/.vim/bundle/vim-trailing-whitespace,/home/cfinley/.vim/bundle/ag.vim,/home/cfinley/.vim/bundle/pick.vim,/home/cfinley/.vim/bundle/quickfix-reflector.vim,/home/cfinley/.vim/bundle/splitjoin.vim,/home/cfinley/.vim/bundle/tabular,/home/cfinley/.vim/bundle/tslime.vim,/home/cfinley/.vim/bundle/vim-turbux,/home/cfinley/.vim/bundle/YankRing.vim,/home/cfinley/.vim/bundle/vim-ruby,/home/cfinley/.vim/bundle/vim-tmux-navigator,/home/cfinley/.vim/bundle/tcomment_vim,/home/cfinley/.vim/bundle/vim-rspec,/home/cfinley/.vim/bundle/vim-surround,/home/cfinley/.vim/bundle/vim-fireplace,/home/cfinley/.vim/bundle/vim-fugitive,/home/cfinley/.vim/bundle/vim-endwise,/home/cfinley/.vim/bundle/vim-rails,/home/cfinley/.vim/bundle/vim-coffee-script,/home/cfinley/.vim/bundl
+Searching for "/home/cfinley/.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/indent/ruby.vim"
+chdir(/home/cfinley/.vim/bundle/vim-ruby/indent)
+fchdir() to previous dir
+line 14: sourcing "/home/cfinley/.vim/bundle/vim-ruby/indent/ruby.vim"
+finished sourcing /home/cfinley/.vim/bundle/vim-ruby/indent/ruby.vim
+continuing in function <SNR>17_LoadIndent
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/indent/ruby.vim"
+Searching for "/var/lib/vim/addons/indent/ruby.vim"
+Searching for "/usr/share/vim/vimfiles/indent/ruby.vim"
+Searching for "/usr/share/vim/vim80/indent/ruby.vim"
+chdir(/usr/share/vim/vim80/indent)
+fchdir() to previous dir
+line 14: sourcing "/usr/share/vim/vim80/indent/ruby.vim"
+finished sourcing /usr/share/vim/vim80/indent/ruby.vim
+continuing in function <SNR>17_LoadIndent
+Searching for "/usr/share/vim/vimfiles/after/indent/ruby.vim"
+Searching for "/var/lib/vim/addons/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/Vundle.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-colors-solarized/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/nerdtree-git-plugin/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/supertab/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-trailing-whitespace/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/ag.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/pick.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/quickfix-reflector.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/splitjoin.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tabular/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tslime.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-turbux/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/YankRing.vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-ruby/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tmux-navigator/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/tcomment_vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rspec/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-surround/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fireplace/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-fugitive/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-endwise/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-rails/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-coffee-script/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/base16-vim/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/vim-tsx/after/indent/ruby.vim"
+Searching for "/home/cfinley/.vim/bundle/typescript-vim/after/indent/ruby.vim"
+Executing FileType Auto commands for "*"
+autocommand exe "set syntax=" . expand("<amatch>")
+
+Executing FileType Auto commands for "ruby"
+autocommand let b:endwise_addition = 'end' | let b:endwise_words = 'module,class,def,if,unless,case,while,until,begin,do' | let b:endwise_pattern = '^\(.*=\)\?\s*\%(private\s\+\|protected\s\+\|public\s\+\|module_function\s\+\)*\zs\%(module\|class\|def\|if\|unless\|case\|while\|until\|for\|\|begin\)\>\%(.*[^.:@$]\<end\>\)\@!\|\<do\ze\%(\s*|.*|\)\=\s*$' | let b:endwise_syngroups = 'rubyModule,rubyClass,rubyDefine,rubyControl,rubyConditional,rubyRepeat'
+
+Executing FileType Auto commands for "*"
+autocommand call s:abbrev()
+
+Executing FileType Auto commands for "*"
+autocommand if RailsDetect() | call rails#buffer_setup() | endif
+
+Executing BufEnter Auto commands for "*"
+autocommand call nerdtree#checkForBrowse(expand("<amatch>"))
+
+Executing BufEnter Auto commands for "*"
+autocommand if exists('s:rebase_continue') |   exe s:Merge('rebase', 0, '', getfsize(fugitive#Find('.git/rebase-merge/git-rebase-todo', s:rebase_continue)) > 0 ? '--continue' : '--abort', remove(s:, 'rebase_continue')) | endif
+
+Executing BufWinEnter Auto commands for "*"
+autocommand if s:can_diffoff(+expand('<abuf>')) && s:diff_window_count() == 1 |   call s:diffoff() | endif
+
+Executing TextChanged Auto commands for "*"
+autocommand call s:Highlight_Matching_Pair()
+
+
+Executing BufWinLeave Auto commands for "*"
+autocommand if s:can_diffoff(+expand('<abuf>')) && s:diff_window_count() == 2 |   call s:diffoff_all(s:Dir(+expand('<abuf>'))) | endif
+
+Executing BufWinLeave Auto commands for "*"
+autocommand execute getwinvar(+bufwinnr(+expand('<abuf>')), 'fugitive_leave')
+
+Writing viminfo file "/home/cfinley/.viminfo"

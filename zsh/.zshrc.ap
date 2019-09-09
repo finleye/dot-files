@@ -66,6 +66,10 @@ function kct () {
   kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
 }
 
+function kctcp () {
+  kct | grep token: | cut -d ' ' -f7 | xclip -sel clipboard
+}
+
 function iap () {
 
 case "$1" in
@@ -82,3 +86,4 @@ case "$1" in
     ;;
 esac
 }
+

@@ -9,12 +9,19 @@ source ~/.zshrc.ap
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-#ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 # ZSH_THEME="avit"
 ZSH_THEME="clean"
 DEFAULT_USER="cfinley"
 
 AWS_REGION="us-east-1"
+
+alias szsh="source ~/.zshrc"
+
+alias lsa="ls -lah"
+
+# infra
+alias bpd="infra app bpd $1"
 
 export INFRA_ROOT_DIR='/home/cfinley/dev/infra'
 export TERM='xterm-256color'
@@ -44,7 +51,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
 export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 
-export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
+export ANSIBLE_LIBRARY=/home/cfinley/dev/ansible/modules
 
 
 
@@ -52,6 +59,7 @@ export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
+export GOPATH=$HOME/work
 
 export PATH=$PATH:$SPARK_HOME/bin
 export PATH="/usr/local/opt/openssl/bin:$PATH"
@@ -59,6 +67,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X1
 export PATH="./bin:$PATH"
 export PATH="/home/cfinley/.local/bin:$PATH"
 export PATH="/home/cfinley/bin:$PATH"
+export PATH="/home/cfinley/dev/envs:$PATH"
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
@@ -109,6 +119,7 @@ alias rx="rbenv exec"
 
 #kbctl
 alias kc="kubectl"
+alias tf="terraform"
 
 # tmux
 # source ~/tmuxinator.zsh
@@ -125,13 +136,7 @@ alias hbspeak="curl -s -H \"Content-Type: application/json\" -d '{ \"auth_token\
 
 alias tacocat="bin/eb deploy qa4"
 
-# eb
-alias deploy="eb deploy"
-alias status="eb status"
-
-alias start-dbs="cd ~/dev/local-services && docker-compose up"
-
-alias mas-upgrade="mas outdated | cut -b 1-9 | xargs mas upgrade"
+alias start-dbs="cd ~/dev/contently && docker-compose up"
 
 #release
 function release {
@@ -141,7 +146,7 @@ function release {
 }
 
 # added by travis gem
-[ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
+# [ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
 
 bindkey '^B' clear-screen
 
@@ -163,4 +168,35 @@ rmd () {
 
 . $HOME/.asdf/completions/asdf.bash
 
-setxkbmap -option ctrl:nocaps 
+setxkbmap -option ctrl:nocaps
+
+
+# display manipulation
+function disp () {
+  case "$1" in
+    hdmi)
+      echo "setting default display to HDMI-0"
+      xrandr --output HDMI-0 --auto --primary
+      gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+      gsettings set org.gnome.desktop.interface scaling-factor 0
+      gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <1>}]"
+      ;;
+    hdmi-home)
+      echo "setting default display to HDMI-0"
+      xrandr --output HDMI-0 --auto --primary
+      gsettings set org.gnome.desktop.interface text-scaling-factor 1.0
+      gsettings set org.gnome.desktop.interface scaling-factor 0
+      gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <1>}]"
+      ;;
+    dp)
+      echo "setting default display to DP-2"
+      xrandr --output DP-2 --auto --primary
+      gsettings set org.gnome.desktop.interface text-scaling-factor 1.0
+      gsettings set org.gnome.desktop.interface scaling-factor 2
+      gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <2>}]"
+      ;;
+    *)
+      echo "setting not recognized"
+      ;;
+  esac
+}
