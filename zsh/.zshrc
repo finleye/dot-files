@@ -3,6 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 source ~/.zshrc.tokens
 source ~/.zshrc.ap
+source ~/.zshrc.kc
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -99,6 +100,7 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gri="git rebase -i"
 alias gf="git fetch --prune"
+alias gcip="git ci -am $1 && git push"
 
 
 #rails
@@ -200,3 +202,5 @@ function disp () {
       ;;
   esac
 }
+
+# eval "$(direnv hook zsh)"

@@ -1,7 +1,10 @@
+source ~/.zshrc.tokens
 alias aws-profile-prod="export AWS_DEFAULT_PROFILE=contently; export AWS_PROFILE=contently;"
 alias aws-profile-test="export AWS_DEFAULT_PROFILE=contently-playpen; export AWS_PROFILE=contently-playpen;"
 alias aws-profile-learn-terraform="export AWS_DEFAULT_PROFILE=learn-terraform; export AWS_PROFILE=learn-terraform;"
 alias aws-profile-clear="export AWS_DEFAULT_PROFILE=; export AWS_PROFILE=;"
+alias aws-creds-clear="export AWS_ACCESS_KEY_ID=;export AWS_SECRET_ACCESS_KEY=;"
+
 
 aws_prompt() {
     local awsprof=$(printenv AWS_DEFAULT_PROFILE)
@@ -30,31 +33,47 @@ infra_prompt() {
 function ap () {
 aws-profile-clear
 
+# Kubernetes master is running at https://192.168.99.100:8443
+# KubeDNS is running at https://192.168.99.100:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+
 case "$1" in
   prod)
     aws-profile-prod
+    aws-creds-contently
     export KUBECONFIG=$HOME/.kube/config
     export KUBECONFIG_NAME=default
     echo "AWS profile and Kube config set to prod"
     ;;
   staging)
     aws-profile-prod
+    aws-creds-contently
     export KUBECONFIG=$HOME/.kube/eks-cluster
     export KUBECONFIG_NAME=eks
     echo "AWS profile set to prod and Kube config set to staging"
     ;;
   test)
     aws-profile-test
+    aws-creds-contently
     export KUBECONFIG=$HOME/.kube/config
     export KUBECONFIG_NAME=default
     echo "AWS profile set to test and Kube config set to test"
     ;;
-  ltf)
-    aws-profile-learn-terraform
-    # not sure which kube config to load here...
+  test)
+    aws-profile-test
+    aws-creds-contently
+    export KUBECONFIG=$HOME/.kube/config
+    export KUBECONFIG_NAME=default
+    echo "AWS profile set to test and Kube config set to test"
+    ;;
+  minikube)
+    aws-creds-clear
+    export KUBECONFIG=$HOME/.kube/config
+    export KUBECONFIG_NAME=minikube
+    echo "kubectl configured for minikube"
     ;;
   *)
-    aws-profile-clear
+    aws-creds-clear
     unset KUBECONFIG
     unset KUBECONFIG_NAME
     echo "AWS profile unset"
@@ -62,13 +81,6 @@ case "$1" in
 esac
 }
 
-function kct () {
-  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
-}
-
-function kctcp () {
-  kct | grep token: | cut -d ' ' -f7 | xclip -sel clipboard
-}
 
 function iap () {
 
