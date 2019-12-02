@@ -1,0 +1,20 @@
+function kct () {
+  kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
+}
+
+function kctcp () {
+  kct | grep token: | cut -d ' ' -f7 | xclip -sel clipboard
+}
+
+function pod () {
+  kubectl get pods -o name | grep $1 | cut -d "/" -f 2
+}
+
+function pod-exec () {
+  if [ "$2" != "" ]
+  then
+    pod $1 | xargs -I {} kubectl exec -it {} $2
+  else
+    pod $1 | xargs -I {} kubectl exec -it {} /bin/sh
+  fi
+}
