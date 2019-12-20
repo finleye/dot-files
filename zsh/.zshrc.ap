@@ -3,6 +3,7 @@ alias aws-profile-prod="export AWS_DEFAULT_PROFILE=contently; export AWS_PROFILE
 alias aws-profile-test="export AWS_DEFAULT_PROFILE=contently-playpen; export AWS_PROFILE=contently-playpen;"
 alias aws-profile-learn-terraform="export AWS_DEFAULT_PROFILE=learn-terraform; export AWS_PROFILE=learn-terraform;"
 alias aws-profile-clear="export AWS_DEFAULT_PROFILE=; export AWS_PROFILE=;"
+alias aws-profile-pi="export AWS_DEFAULT_PROFILE=pi; export AWS_PROFILE=pi;"
 alias aws-creds-clear="export AWS_ACCESS_KEY_ID=;export AWS_SECRET_ACCESS_KEY=;"
 
 
@@ -71,6 +72,14 @@ case "$1" in
     export KUBECONFIG=$HOME/.kube/config
     export KUBECONFIG_NAME=minikube
     echo "kubectl configured for minikube"
+    ;;
+  pi)
+    unset KUBECONFIG
+    unset KUBECONFIG_NAME
+    echo "Kube config unset"
+    aws-creds-pi
+    aws-profile-pi
+    echo "AWS profile set to pi"
     ;;
   *)
     aws-creds-clear

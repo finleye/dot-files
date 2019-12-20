@@ -24,7 +24,7 @@ alias lsa="ls -lah"
 # infra
 alias bpd="infra app bpd $1"
 
-export INFRA_ROOT_DIR='/home/cfinley/dev/infra'
+export INFRA_ROOT_DIR='/home/pi/dev/infra'
 export TERM='xterm-256color'
 export EDITOR="vim"
 
@@ -49,8 +49,8 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 
-export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
-export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
+# export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
+# export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 
 export ANSIBLE_LIBRARY=/home/cfinley/dev/ansible/modules
 
@@ -62,13 +62,13 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 export GOPATH=$HOME/work
 
-export PATH=$PATH:$SPARK_HOME/bin
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-export PATH="./bin:$PATH"
-export PATH="/home/cfinley/.local/bin:$PATH"
-export PATH="/home/cfinley/bin:$PATH"
-export PATH="/home/cfinley/dev/envs:$PATH"
+#export PATH=$PATH:$SPARK_HOME/bin
+#export PATH="/usr/local/opt/openssl/bin:$PATH"
+#export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+#export PATH="./bin:$PATH"
+#export PATH="/home/cfinley/.local/bin:$PATH"
+#export PATH="/home/cfinley/bin:$PATH"
+#export PATH="/home/cfinley/dev/envs:$PATH"
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
@@ -204,3 +204,4 @@ function disp () {
 }
 
 # eval "$(direnv hook zsh)"
+export PATH=$HOME/bin:$PATH
