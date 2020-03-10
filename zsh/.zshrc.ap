@@ -52,6 +52,13 @@ case "$1" in
     export KUBECONFIG_NAME=eks
     echo "AWS profile set to prod and Kube config set to staging"
     ;;
+  cicd)
+    aws-profile-prod
+    aws-creds-contently
+    export KUBECONFIG=$HOME/.kube/config
+    export KUBECONFIG_NAME=cicd-1.us-east-1.eksctl.io
+    echo "AWS profile set to prod and Kube config set to cicd-1"
+    ;;
   test)
     aws-profile-test
     aws-creds-contently
@@ -70,6 +77,7 @@ case "$1" in
     aws-creds-clear
     export KUBECONFIG=$HOME/.kube/config
     export KUBECONFIG_NAME=minikube
+    kubectl config set-context minikube
     echo "kubectl configured for minikube"
     ;;
   *)

@@ -49,8 +49,14 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 
-export SPARK_HOME=/usr/local/Cellar/apache-spark/1.0.0
-export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
+# export SPARK_HOME=/usr/local/spark/bin
+# export PATH=$PATH:/usr/local/spark/bin
+# export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
+
+# export SPARK_HOME=/usr/local/spark
+export SPARK_HOME=/usr/local/spark-1.6.0-bin-hadoop2.6
+export PYTHONPATH=$SPARK_HOME/python/:$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
+export PATH="$PATH:$JAVA_HOME/bin:$SPARK_HOME/bin:$PYTHONPATH"
 
 export ANSIBLE_LIBRARY=/home/cfinley/dev/ansible/modules
 
@@ -65,7 +71,7 @@ export GOPATH=$HOME/work
 export PATH=$PATH:$SPARK_HOME/bin
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-export PATH="./bin:$PATH"
+# export PATH="./bin:$PATH"
 export PATH="/home/cfinley/.local/bin:$PATH"
 export PATH="/home/cfinley/bin:$PATH"
 export PATH="/home/cfinley/dev/envs:$PATH"
@@ -190,6 +196,13 @@ function disp () {
       gsettings set org.gnome.desktop.interface scaling-factor 0
       gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <1>}]"
       ;;
+    dp-0)
+      echo "setting default display to DP-0"
+      xrandr --output DP-0 --auto --primary
+      gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
+      gsettings set org.gnome.desktop.interface scaling-factor 0
+      gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "[{'Gdk/WindowScalingFactor', <1>}]"
+      ;;
     dp)
       echo "setting default display to DP-2"
       xrandr --output DP-2 --auto --primary
@@ -203,4 +216,22 @@ function disp () {
   esac
 }
 
-# eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
+
+export PGPASSWORD=contently
+export DATABASE_POSTGRESQL_USERNAME=contently
+export DATABASE_POSTGRESQL_PASSWORD=contently
+
+
+# bash-my-aws
+export PATH="$PATH:$HOME/.bash-my-aws/bin"
+source ~/.bash-my-aws/aliases
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+source ~/.bash-my-aws/bash_completion.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/cfinley/google-cloud-sdk/path.zsh.inc' ]; then . '/home/cfinley/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/cfinley/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/cfinley/google-cloud-sdk/completion.zsh.inc'; fi
