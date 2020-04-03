@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 12,
+    "terminal.integrated.fontSize": 12,
+    "workbench.colorTheme": "Dracula",
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.format": "rubocop",
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true
+}
