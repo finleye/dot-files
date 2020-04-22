@@ -2,9 +2,22 @@
     "window.zoomLevel": 0,
     "editor.fontSize": 12,
     "terminal.integrated.fontSize": 12,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Monokai",
     "ruby.codeCompletion": "rcodetools",
     "ruby.format": "rubocop",
     "explorer.confirmDragAndDrop": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "editor.tabSize": 2,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.iconTheme": "material-icon-theme",
+    "cSpell.userWords": [
+        "NETSUITE",
+        "PAYPAL"
+    ],
+    "todohighlight.isEnable": true,
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "editor.fontFamily": "'DankMono-Regular', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "workbench.editor.enablePreview": false
 }
