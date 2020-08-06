@@ -11,7 +11,7 @@ set background=dark
 set t_Co=16
 "colorscheme solarized
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-bright
+" colorscheme base16-bright
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 if !has("gui_running")
@@ -24,7 +24,7 @@ nmap <silent> // :nohlsearch<CR>
 
 " using system keyboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+" nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Set up softtabs
 set tabstop=2
@@ -35,7 +35,6 @@ set expandtab
 " YankRing
 nnoremap <silent> <C-y> :YRShow<CR>
 
-" Window/Tab/Split Manipulation
 "   Move between split windows by using the four directions H, L, I, N
 "   (note that  I use I and N instead of J and K because  J already does
 "   line joins and K is mapped to GitGrep the current word
@@ -44,13 +43,40 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-"pick
-let g:pick_executable = "pick"
-nnoremap <silent> <C-t> :call PickFile()<CR>
-nnoremap <silent> <C-g> :call PickFileTab()<CR>
-nnoremap <silent> <C-b> :call PickBuffer()<CR>
-nnoremap <leader>] :call PickTag()<CR>
+" "pick
+" let g:pick_executable = "pick"
+" nnoremap <silent> <C-t> :call PickFile()<CR>
+" nnoremap <silent> <C-g> :call PickFileTab()<CR>
+" nnoremap <silent> <C-b> :call PickBuffer()<CR>
+" nnoremap <leader>] :call PickTag()<CR>
 
+"fzf
+set rtp+=/usr/local/opt/fzf
+
+" function! s:ag_with_opts(arg, bang)
+"   let tokens  = split(a:arg)
+"   let ag_opts = join(filter(copy(tokens), 'v:val =~ "^-"'))
+"   let query   = join(filter(copy(tokens), 'v:val !~ "^-"'))
+"   call fzf#vim#ag(query, ag_opts, a:bang ? {} : {'down': '40%'})
+" endfunction
+" autocmd VimEnter * command! -nargs=* -bang Ag call s:ag_with_opts(<q-args>, <bang>0)
+
+let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules'
+let g:fzf_preview_window = 'right:60%'
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+nnoremap <silent> <c-t> :GFiles<CR>
+nnoremap <silent> <c-s> :Tags<CR>
+nnoremap <Leader>f :Ag ""<left>
+nnoremap <Leader>F :Rg<CR>
+
+nnoremap <Leader>o <C-^>
+
+" nnoremap <silent> <C-g> :call PickFileTab()<CR>
+" nnoremap <silent> <C-b>
+" nnoremap <leader>] :call PickTag()<CR>
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
 " this to vv and ss
@@ -90,7 +116,7 @@ function! AlternateForCurrentFile()
   let new_file = current_file
   let in_spec = match(current_file, '^spec/') != -1
   let going_to_spec = !in_spec
-  let in_app = match(current_file, '\<commands\>') != -1 || match(current_file, '\<presenters\>') != -1 || match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<services\>') != -1 || match(current_file, '\<presenters\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1 || match(current_file, '\<workers\>') != -1 || match(current_file, '\<policies\>') != -1 || match(current_file, '\<queries\>') != -1
+  let in_app = match(current_file, '\<commands\>') != -1 || match(current_file, '\<api\>') != -1 || match(current_file, '\<service_objects\>') != -1 || match(current_file, '\<presenters\>') != -1 || match(current_file, '\<controllers\>') != -1 || match(current_file, '\<models\>') != -1 || match(current_file, '\<services\>') != -1 || match(current_file, '\<presenters\>') != -1 || match(current_file, '\<views\>') != -1 || match(current_file, '\<helpers\>') != -1 || match(current_file, '\<workers\>') != -1 || match(current_file, '\<policies\>') != -1 || match(current_file, '\<queries\>') != -1
   if going_to_spec
     if in_app
       let new_file = substitute(new_file, '^app/', '', '')
@@ -131,10 +157,11 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 nnoremap <Leader>c :SyntasticCheck<CR>
 
 " regenerate tags
-nnoremap <Leader>R :!ctags -R<CR>
+nnoremap <Leader>R :!ctags -R --exclude=.git --exclude=node_modules .<CR>
 
 " 80,100 line marker
-set colorcolumn=80,100
+set colorcolumn=80,120
+highlight ColorColumn ctermbg=8
 
 " rubocop
 let g:vimrubocop_keymap = 0
@@ -159,7 +186,6 @@ let g:qf_write_changes = 1
 
 " commandline things
 nnoremap <Leader>G :Git<Space>
-nnoremap <Leader>f :Ag ""<left>
 nnoremap <Leader>1 :!<Space>
 
 " fugitive
@@ -189,4 +215,3 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 map <leader>m :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
-

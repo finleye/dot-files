@@ -39,13 +39,17 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'chriskempson/base16-vim'
+" Plugin 'chriskempson/base16-vim'
 Plugin 'ianks/vim-tsx'
-Plugin 'burnettk/vim-angular'
+" Plugin 'burnettk/vim-angular'
 Plugin 'leafgarland/typescript-vim'
+
+" Plugin 'dracula/vim', { 'name': 'dracula' }
+
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

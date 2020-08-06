@@ -13,4 +13,6 @@ set fillchars+=stl:\ ,stlnc:\
 "let g:Powerline_mode_S="S·LINE"
 "let g:Powerline_mode_cs="S·BLOCK"
 let g:airline#extensions#tabline#enabled = 1
+
+
 au BufRead,BufNewFile *.hamlc set ft=haml

@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-source ~/.zshrc.tokens
-source ~/.zshrc.ap
+# source ~/.zshrc.tokens
+source ~/.zshrc.catalyst
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -63,7 +63,7 @@ alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
 
 #plugins=(git battery)
-plugins=(git battery history-substring-search colored-man colorize)
+plugins=(git battery history-substring-search colored-man-pages colorize)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,15 +91,6 @@ alias gf="git fetch --prune"
 
 #rails
 alias r="rails"
-alias migrate="rake db:migrate && rake db:test:prepare && spring stop"
-alias refreshdb="~/drop_db.sh"
-
-#elstic dump
-alias edump="elasticdump --input=https://ghostFacedKilla:casHRul353v3rY7HiNgAr0undM3@a5e6a3f487180f34000.qbox.io/$2 --output=http://localhost:9200/$3 --type=$1"
-
-#workers
-alias worker:clean="rake jobs:clear"
-alias worker:start="rake jobs:work"
 
 #bundler
 alias bx="bundle exec"
@@ -108,8 +99,12 @@ alias rx="rbenv exec"
 #kbctl
 alias kc="kubectl"
 
+#docker-compose
+alias dc="docker-compose"
+
+
 # tmux
-source ~/tmuxinator.zsh
+# source ~/tmuxinator.zsh
 alias tx="tmuxinator"
 
 alias tml="tmux list-sessions"
@@ -118,36 +113,12 @@ alias tmk="tmux kill-session -t $1"
 alias tmr="tmux rename-window $1"
 alias tdir="tmux attach -c \"#{pane_current_path}\""
 
-# speak
-alias hbspeak="curl -s -H \"Content-Type: application/json\" -d '{ \"auth_token\": \"PANDAMOUSE\", \"room\" : \"tech-deployments\", \"msg\" : $2}' 'https://honeyb.herokuapp.com/speak'"
-
-alias tacocat="bin/eb deploy qa4"
-
-# eb
-alias deploy="eb deploy"
-alias status="eb status"
-
-alias start-dbs="cd ~/dev/local-services && docker-compose up"
-
 alias mas-upgrade="mas outdated | cut -b 1-9 | xargs mas upgrade"
-
-#release
-function release {
-  local url
-  url="https://evilolive.herokuapp.com/deployed?env=$1&branch=AVAILABLE&user="
-  curl -s -d '{ \"auth_token\": \"PANDAMOUSE\" }' $url
-}
-
-# added by travis gem
-[ -f /Users/coreyfinley/.travis/travis.sh ] && source /Users/coreyfinley/.travis/travis.sh
-
-
 
 bindkey '^B' clear-screen
 
-. /usr/local/opt/asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
 
-. /usr/local/etc/bash_completion.d/asdf.bash
 
 rmd () {
   pandoc $1 | lynx -stdin
@@ -162,3 +133,8 @@ rmd () {
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

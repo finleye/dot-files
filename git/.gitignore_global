@@ -2,3 +2,5 @@
 .DS_Store
 *.pen
 *.swp
+.swp
+tags
