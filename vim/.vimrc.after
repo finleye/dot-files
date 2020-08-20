@@ -7,11 +7,8 @@ set nu
 syntax on
 syntax sync minlines=256
 set background=dark
-"let g:solarized_termcolors=16
 set t_Co=16
-"colorscheme solarized
 let base16colorspace=256  " Access colors present in 256 colorspace
-" colorscheme base16-bright
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 if !has("gui_running")
@@ -21,10 +18,9 @@ endif
 " clear match buffer
 nmap <silent> // :nohlsearch<CR>
 
-
 " using system keyboard
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-" nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Set up softtabs
 set tabstop=2
@@ -43,24 +39,8 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-j> <C-w>j
 
-" "pick
-" let g:pick_executable = "pick"
-" nnoremap <silent> <C-t> :call PickFile()<CR>
-" nnoremap <silent> <C-g> :call PickFileTab()<CR>
-" nnoremap <silent> <C-b> :call PickBuffer()<CR>
-" nnoremap <leader>] :call PickTag()<CR>
-
 "fzf
 set rtp+=/usr/local/opt/fzf
-
-" function! s:ag_with_opts(arg, bang)
-"   let tokens  = split(a:arg)
-"   let ag_opts = join(filter(copy(tokens), 'v:val =~ "^-"'))
-"   let query   = join(filter(copy(tokens), 'v:val !~ "^-"'))
-"   call fzf#vim#ag(query, ag_opts, a:bang ? {} : {'down': '40%'})
-" endfunction
-" autocmd VimEnter * command! -nargs=* -bang Ag call s:ag_with_opts(<q-args>, <bang>0)
-
 let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules'
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_action = {
@@ -68,15 +48,17 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 nnoremap <silent> <c-t> :GFiles<CR>
+nnoremap <silent> <c-b> :Buffer<CR>
 nnoremap <silent> <c-s> :Tags<CR>
-nnoremap <Leader>f :Ag ""<left>
+nnoremap <silent> <c-m> :Marks<CR>
 nnoremap <Leader>F :Rg<CR>
 
-nnoremap <Leader>o <C-^>
+" Ag
+nnoremap <Leader>f :Ag ""<left>
 
-" nnoremap <silent> <C-g> :call PickFileTab()<CR>
-" nnoremap <silent> <C-b>
-" nnoremap <leader>] :call PickTag()<CR>
+" Toggle between current and last file
+nnoremap <silent>oo <C-^>
+
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
 " this to vv and ss
@@ -89,7 +71,7 @@ nnoremap <C-Down> <C-w>-
 nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
 
-" tSlime
+" turbux
 let g:turbux_command_rspec = "rspec"
 let g:turbux_runner  = 'tslime'
 
@@ -151,11 +133,6 @@ endfunction
 command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
 nmap ,w :StripTrailingWhitespaces<CR>
 
-
-" disable syntastic by default
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <Leader>c :SyntasticCheck<CR>
-
 " regenerate tags
 nnoremap <Leader>R :!ctags -R --exclude=.git --exclude=node_modules .<CR>
 
@@ -163,17 +140,23 @@ nnoremap <Leader>R :!ctags -R --exclude=.git --exclude=node_modules .<CR>
 set colorcolumn=80,120
 highlight ColorColumn ctermbg=8
 
+" tslime
+vmap <Leader>rt <Plug>SendSelectionToTmux
+nmap <Leader>stv <Plug>SetTmuxVars
+function! <SID>TmuxRuboCop()
+  let cf=expand('%')
+  echo cf
+  call SendToTmux('rubocop '.cf."\n")
+endfunction
+command! TmuxRuboCop call <SID>TmuxRuboCop()
+nmap <Leader>rc :TmuxRuboCop<CR>
+
 " rubocop
 let g:vimrubocop_keymap = 0
 let g:vimrubocop_config = '~/Documents/contently/.rubocop.yml'
-nmap <Leader>r :RuboCop<CR>
-
-" SyntasticCheck
-nmap <Leader>s :SyntasticCheck<CR>
 
 "resource
 nnoremap <leader>src :source ~/.vimrc.after<cr>
-
 
 "silver searcher
 let g:ag_prg='ag -S --nocolor --nogroup --column --ignore node_modules --ignore "./public/*"'

@@ -1,18 +1,39 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# source ~/.zshrc.tokens
-source ~/.zshrc.catalyst
+if [ ! -f ~/.zshrc.catalyst ]; then
+    source ~/.zshrc.catalyst
+fi
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-#ZSH_THEME="agnoster"
-# ZSH_THEME="avit"
-ZSH_THEME="clean"
-DEFAULT_USER="coreyfinley"
+# ZSH_THEME="clean"
+ZSH_THEME="spaceship"
+DEFAULT_USER="corey"
+
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stamps section
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  # package       # Package version
+  # node          # Node.js section
+  # ruby          # Ruby section
+  # docker        # Docker section
+  # kubectl       # Kubectl context section
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
 
 AWS_REGION="us-east-1"
 
@@ -63,7 +84,7 @@ alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
 
 #plugins=(git battery)
-plugins=(git battery history-substring-search colored-man-pages colorize)
+plugins=(git battery history-substring-search colored-man-pages colorize jsontools fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,6 +143,10 @@ bindkey '^B' clear-screen
 
 rmd () {
   pandoc $1 | lynx -stdin
+}
+
+jcurl () {
+  curl $* | jq '.'
 }
 
 # tabtab source for serverless package

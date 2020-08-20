@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ervandew/supertab'
-"Plugin 'scrooloose/nerdcommenter'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'rking/ag.vim'
@@ -23,14 +22,14 @@ Plugin 'stefandtw/quickfix-reflector.vim'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'jgdavey/tslime.vim'
-"Plugin 'ngmy/vim-rubocop'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'christoomey/vim-tmux-navigator'
-"Plugin 'elixir-lang/vim-elixir'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ianks/vim-tsx'
 
 "tpope
 Plugin 'tpope/vim-surround'
@@ -39,17 +38,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 
-" Plugin 'kchmck/vim-coffee-script'
-Plugin 'terryma/vim-multiple-cursors'
 
-" Plugin 'chriskempson/base16-vim'
-Plugin 'ianks/vim-tsx'
-" Plugin 'burnettk/vim-angular'
-Plugin 'leafgarland/typescript-vim'
-
-" Plugin 'dracula/vim', { 'name': 'dracula' }
-
-Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
