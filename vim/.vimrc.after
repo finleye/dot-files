@@ -57,7 +57,7 @@ nnoremap <Leader>F :Rg<CR>
 nnoremap <Leader>f :Ag ""<left>
 
 " Toggle between current and last file
-nnoremap <silent>oo <C-^>
+nnoremap <silent>go <C-^>
 
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
