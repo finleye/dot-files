@@ -50,7 +50,7 @@ let g:fzf_action = {
 nnoremap <silent> <c-t> :GFiles<CR>
 nnoremap <silent> <c-b> :Buffer<CR>
 nnoremap <silent> <c-s> :Tags<CR>
-nnoremap <silent> <c-m> :Marks<CR>
+" nnoremap <silent> <c-n> :Marks<CR>
 nnoremap <Leader>F :Rg<CR>
 
 " Ag
@@ -70,10 +70,6 @@ nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
 nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
-
-" turbux
-let g:turbux_command_rspec = "rspec"
-let g:turbux_runner  = 'tslime'
 
 " =================================================
 " Awesome macro that promotes Rspec locals to 'lets'
@@ -141,8 +137,10 @@ set colorcolumn=80,120
 highlight ColorColumn ctermbg=8
 
 " tslime
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
 vmap <Leader>rt <Plug>SendSelectionToTmux
-nmap <Leader>stv <Plug>SetTmuxVars
+nmap <Leader>ts <Plug>SetTmuxVars
 function! <SID>TmuxRuboCop()
   let cf=expand('%')
   echo cf
@@ -150,6 +148,10 @@ function! <SID>TmuxRuboCop()
 endfunction
 command! TmuxRuboCop call <SID>TmuxRuboCop()
 nmap <Leader>rc :TmuxRuboCop<CR>
+" turbux
+let g:turbux_command_rspec = "rspec"
+let g:turbux_runner  = 'tslime'
+
 
 " rubocop
 let g:vimrubocop_keymap = 0

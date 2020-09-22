@@ -30,6 +30,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ianks/vim-tsx'
+Plugin 'junegunn/fzf.vim'
 
 "tpope
 Plugin 'tpope/vim-surround'

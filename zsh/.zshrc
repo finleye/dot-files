@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-if [ ! -f ~/.zshrc.catalyst ]; then
-    source ~/.zshrc.catalyst
+if [ ! -f /Users/corey/dev/catalyst/.zshrc.catalyst ]; then
+  source ~/.zshrc.catalyst
 fi
 
 # Set name of the theme to load.
@@ -109,6 +109,14 @@ alias gcb="git checkout -b"
 alias gri="git rebase -i"
 alias gf="git fetch --prune"
 
+function touched-files () {
+  git --no-pager diff --name-only $(git branch --show-current) origin/staging  -- . ':(exclude)db/structure.sql'
+}
+
+function out-join () {
+  awk '{print}' ORS=' '
+}
+
 
 #rails
 alias r="rails"
@@ -163,3 +171,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# gh tool completion
+eval "$(gh completion -s zsh)"
