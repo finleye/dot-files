@@ -1,6 +1,7 @@
 [user]
 	name = Corey Finley
-	email = finley.corey@gmail.com
+	# email = finley.corey@gmail.com
+	email = corey@getcatalyst.io
 [core]
   editor = vim
 	excludesfile = /Users/corey/.gitignore_global
@@ -35,3 +36,5 @@
   enabled = true
 [branch]
   autosetuprebase = always
+[commit]
+	gpgsign = true

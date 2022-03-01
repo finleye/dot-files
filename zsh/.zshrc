@@ -1,9 +1,16 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+eval_ondir() {
+  eval "`ondir \"$OLDPWD\" \"$PWD\"`"
+}
+chpwd_functions=( eval_ondir $chpwd_functions )
+
 if [ ! -f /Users/corey/dev/catalyst/.zshrc.catalyst ]; then
   source ~/.zshrc.catalyst
 fi
+
+source ~/.zshrc.secrets
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -68,6 +75,7 @@ export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 export PATH=$PATH:$SPARK_HOME/bin
 export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 
+export PATH=$PATH:/usr/bin/go
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # Base16 Shell
@@ -81,7 +89,10 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X1
 export PATH="./bin:$PATH"
 
 alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
+alias ctconfig="vim ~/.zshrc.catalyst && source ~/.zshrc"
+alias zshsource="source ~/.zshrc"
 alias vimconfig="vim ~/.vimrc.after"
+alias w="watch"
 
 #plugins=(git battery)
 plugins=(git battery history-substring-search colored-man-pages colorize jsontools fast-syntax-highlighting)
@@ -110,7 +121,11 @@ alias gri="git rebase -i"
 alias gf="git fetch --prune"
 
 function touched-files () {
-  git --no-pager diff --name-only $(git branch --show-current) origin/staging  -- . ':(exclude)db/structure.sql'
+  git --no-pager diff --name-only $(git branch --show-current) origin/staging  -- . ':(exclude)db/structure.sql' ':(exclude)config/sidekiq_scheduler.yml'
+}
+
+function touched-files-main () {
+  git --no-pager diff --name-only $(git branch --show-current) origin/main  -- . ':(exclude)db/structure.sql' ':(exclude)config/sidekiq_scheduler.yml'
 }
 
 function out-join () {
@@ -129,18 +144,23 @@ alias rx="rbenv exec"
 alias kc="kubectl"
 
 #docker-compose
-alias dc="docker-compose"
+alias dc="docker compose"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
 
 
 # tmux
 # source ~/tmuxinator.zsh
 alias tx="tmuxinator"
+alias txc="tmuxinator start catalyst"
+alias txx="tmuxinator stop catalyst"
 
 alias tml="tmux list-sessions"
 alias tma="tmux -2 attach -t $1"
 alias tmk="tmux kill-session -t $1"
 alias tmr="tmux rename-window $1"
 alias tdir="tmux attach -c \"#{pane_current_path}\""
+alias td="tmux set-option default-path \"$PWD\""
 
 alias mas-upgrade="mas outdated | cut -b 1-9 | xargs mas upgrade"
 
@@ -174,3 +194,41 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # gh tool completion
 eval "$(gh completion -s zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
+# pretty print decoded jwt
+function jwt() {
+  for part in 1 2; do
+    b64="$(cut -f$part -d. <<< "$1" | tr '_-' '/+')"
+    len=${#b64}
+    n=$((len % 4))
+    if [[ 2 -eq n ]]; then
+      b64="${b64}=="
+    elif [[ 3 -eq n ]]; then
+      b64="${b64}="
+    fi
+    d="$(openssl enc -base64 -d -A <<< "$b64")"
+    python -mjson.tool <<< "$d"
+    # don't decode further if this is an encrypted JWT (JWE)
+    if [[ 1 -eq part ]] && grep '"enc":' <<< "$d" >/dev/null ; then
+        exit 0
+    fi
+  done
+}
+
+alias rc=docker-compose run web rails console

@@ -149,7 +149,7 @@ endfunction
 command! TmuxRuboCop call <SID>TmuxRuboCop()
 nmap <Leader>rc :TmuxRuboCop<CR>
 " turbux
-let g:turbux_command_rspec = "rspec"
+let g:turbux_command_rspec = "time spring rspec"
 let g:turbux_runner  = 'tslime'
 
 
@@ -200,3 +200,18 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 map <leader>m :NERDTreeFind<CR>
 nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
+
+
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Status line types/signatures
+let g:go_auto_type_info = 1
