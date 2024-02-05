@@ -4,6 +4,8 @@ ZSH=$HOME/.oh-my-zsh
 eval_ondir() {
   eval "`ondir \"$OLDPWD\" \"$PWD\"`"
 }
+
+
 chpwd_functions=( eval_ondir $chpwd_functions )
 
 if [ ! -f /Users/corey/dev/catalyst/.zshrc.catalyst ]; then
@@ -17,7 +19,7 @@ source ~/.zshrc.secrets
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-# ZSH_THEME="clean"
+#ZSH_THEME="clean"
 ZSH_THEME="spaceship"
 DEFAULT_USER="corey"
 
@@ -75,8 +77,9 @@ export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 export PATH=$PATH:$SPARK_HOME/bin
 export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 
-export PATH=$PATH:/usr/bin/go
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -95,7 +98,8 @@ alias vimconfig="vim ~/.vimrc.after"
 alias w="watch"
 
 #plugins=(git battery)
-plugins=(git battery history-substring-search colored-man-pages colorize jsontools fast-syntax-highlighting)
+#plugins=(git battery history-substring-search colored-man-pages colorize jsontools fast-syntax-highlighting)
+plugins=(git battery history-substring-search colored-man-pages colorize jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -166,7 +170,6 @@ alias mas-upgrade="mas outdated | cut -b 1-9 | xargs mas upgrade"
 
 bindkey '^B' clear-screen
 
-. $HOME/.asdf/asdf.sh
 
 
 rmd () {
@@ -192,14 +195,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# gh tool completion
-eval "$(gh completion -s zsh)"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/usr/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
@@ -231,4 +226,34 @@ function jwt() {
   done
 }
 
+function current_vol() {
+  osascript -e 'set currentVolume to output volume of (get volume settings)'
+}
+
 alias rc=docker-compose run web rails console
+
+eval $(/opt/homebrew/bin/brew shellenv)
+# gh tool completion
+eval "$(gh completion -s zsh)"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+export PATH=$PATH:/usr/local/go/bin
+
+function print_header() {
+    echo "============================================================================================================="
+    echo "$1"
+    echo "============================================================================================================="
+}
+
+function make_space() {
+    echo "============================================================================================================="
+    echo
+    echo
+    echo
+}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/corey/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/corey/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/corey/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/corey/google-cloud-sdk/completion.zsh.inc'; fi

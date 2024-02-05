@@ -2,6 +2,7 @@
 	name = Corey Finley
 	# email = finley.corey@gmail.com
 	email = corey@getcatalyst.io
+	signingkey = CA52005E59457781
 [core]
   editor = vim
 	excludesfile = /Users/corey/.gitignore_global

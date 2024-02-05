@@ -30,6 +30,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ianks/vim-tsx'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
 "tpope
@@ -38,7 +39,16 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-dadbod'
 
+Plugin 'kristijanhusak/vim-dadbod-ui'
+Plugin 'vim-airline/vim-airline'
+" Plugin 'itchyny/lightline.vim'
+" Plugin 'kristijanhusak/vim-dadbod-completion'
+" Plugin 'neoclide/coc.nvim'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+
+Plugin 'chrisbra/csv.vim'
 
 
 call vundle#end()            " required

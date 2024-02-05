@@ -21,12 +21,15 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-python'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dadbod'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'fatih/vim-go'
+Bundle 'kristijanhusak/vim-dadbod-ui'
+Bundle 'chrisbra/csv.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

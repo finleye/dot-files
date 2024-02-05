@@ -9,6 +9,7 @@ syntax sync minlines=256
 set background=dark
 set t_Co=16
 let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme dracula
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 if !has("gui_running")
@@ -174,11 +175,14 @@ nnoremap <Leader>G :Git<Space>
 nnoremap <Leader>1 :!<Space>
 
 " fugitive
-nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gs :Git<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gl :Git l<CR>
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gp :Gpush<CR>
+
+" dbui
+nnoremap <Leader>db :DBUI<CR>
 
 " alias capital commands
 command! Q q " Bind :Q to :q
@@ -215,3 +219,14 @@ let g:go_fmt_command = "goimports"
 
 " Status line types/signatures
 let g:go_auto_type_info = 1
+
+" DBUI
+let g:db_ui_winwidth = 40
+let g:db_ui_table_helpers = {
+\   'postgresql': {
+\     'Count': 'select count(*) from "{table}"'
+\   }
+\ }
+let g:db_ui_auto_execute_table_helpers = 1
+let g:db_ui_use_nerd_fonts = 1
+nnoremap <Leader>K :resize 35<CR>
