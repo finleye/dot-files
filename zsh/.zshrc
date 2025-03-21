@@ -1,5 +1,15 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+
+# fix Maven "Too many open files" issue
+ulimit -n 32768
 
 eval_ondir() {
   eval "`ondir \"$OLDPWD\" \"$PWD\"`"
@@ -8,47 +18,35 @@ eval_ondir() {
 
 chpwd_functions=( eval_ondir $chpwd_functions )
 
-if [ ! -f /Users/corey/dev/catalyst/.zshrc.catalyst ]; then
-  source ~/.zshrc.catalyst
-fi
-
 source ~/.zshrc.secrets
+source ~/.zshrc.datadog
+# source $(brew --prefix)/opt/spaceship/spaceship.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+export PATH=$PATH:/usr/local/go/bin
 
-#ZSH_THEME="clean"
-ZSH_THEME="spaceship"
-DEFAULT_USER="corey"
+# Update with your preference
+export DATADOG_ROOT=~/dd
+# Force certain more-secure behaviours from homebrew
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_CASK_OPTS=--require-sha
+# Add devtools binaries in your PATH, so you have access to 'to-staging' and 'branches-status'
+# !!! Make sure that this is *after* adding homebrew to PATH if you have brew. !!!
+export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
 
-SPACESHIP_TIME_SHOW=true
-SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stamps section
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  # package       # Package version
-  # node          # Node.js section
-  # ruby          # Ruby section
-  # docker        # Docker section
-  # kubectl       # Kubectl context section
-  exec_time     # Execution time
-  line_sep      # Line break
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
+# enchant c library location for pyenchant
+PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.2.dylib
+
+DEFAULT_USER="corey.finley"
+
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 AWS_REGION="us-east-1"
 
 export INFRA_ROOT_DIR='/Users/coreyfinley/dev/infra'
 export TERM='xterm-256color'
-export EDITOR="vim"
+export EDITOR="nvim"
+export PYTHONPATH=$HOME/dd/dogweb/lib:$HOME/dd/dogweb/lib/dogweb-model
 
 if [[ `uname` == 'Linux' ]]; then
   export OS=linux
@@ -58,13 +56,6 @@ elif [[ `uname` == 'Darwin' ]]; then
   export ZPLUG_HOME=/usr/local/opt/zplug
 fi
 
-#export CC=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/gcc-4.2
-#export CXX=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/g++-4.2
-#export CPP=/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/cpp-4.2
-
-#export CC=/usr/local/Cellar/gcc48/4.8.5/bin/gcc-4.8
-#export CXX=/usr/local/Cellar/gcc48/4.8.5/bin/g++-4.8
-#export CXX=/usr/local/Cellar/gcc48/4.8.5/bin/cpp-4.8
 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 # add support for ctrl+o to open selected file in VS Code
@@ -91,14 +82,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X1
 # eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 
-alias zshconfig="vim ~/.zshrc && source ~/.zshrc"
-alias ctconfig="vim ~/.zshrc.catalyst && source ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
+alias ctconfig="nvim ~/.zshrc.catalyst && source ~/.zshrc"
 alias zshsource="source ~/.zshrc"
-alias vimconfig="vim ~/.vimrc.after"
+alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias w="watch"
 
-#plugins=(git battery)
-#plugins=(git battery history-substring-search colored-man-pages colorize jsontools fast-syntax-highlighting)
 plugins=(git battery history-substring-search colored-man-pages colorize jsontools)
 
 source $ZSH/oh-my-zsh.sh
@@ -120,9 +109,15 @@ alias g="git"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gc="git checkout"
+alias gcb="git rev-parse --abbrev-ref HEAD"
 alias gcb="git checkout -b"
 alias gri="git rebase -i"
-alias gf="git fetch --prune"
+alias gf="git fetch"
+alias gfp="git fetch --prune"
+
+function gco () {
+  git checkout -t origin/$1
+}
 
 function touched-files () {
   git --no-pager diff --name-only $(git branch --show-current) origin/staging  -- . ':(exclude)db/structure.sql' ':(exclude)config/sidekiq_scheduler.yml'
@@ -170,8 +165,6 @@ alias mas-upgrade="mas outdated | cut -b 1-9 | xargs mas upgrade"
 
 bindkey '^B' clear-screen
 
-
-
 rmd () {
   pandoc $1 | lynx -stdin
 }
@@ -180,21 +173,9 @@ jcurl () {
   curl $* | jq '.'
 }
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/coreyfinley/.asdf/installs/nodejs/10.15.2/.npm/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
@@ -235,25 +216,126 @@ alias rc=docker-compose run web rails console
 eval $(/opt/homebrew/bin/brew shellenv)
 # gh tool completion
 eval "$(gh completion -s zsh)"
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-export PATH=$PATH:/usr/local/go/bin
 
-function print_header() {
-    echo "============================================================================================================="
-    echo "$1"
-    echo "============================================================================================================="
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+# BEGIN ANSIBLE MANAGED BLOCK
+# Load homebrew shell variables
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Force certain more-secure behaviours from homebrew
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_CASK_OPTS=--require-sha
+export HOMEBREW_DIR=/opt/homebrew
+export HOMEBREW_BIN=/opt/homebrew/bin
+
+# Load python shims
+eval "$(pyenv init -)"
+
+# Load ruby shims
+eval "$(rbenv init -)"
+
+# Prefer GNU binaries to Macintosh binaries.
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+# VOLTA
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Add GCloud to PATH
+source "/opt/homebrew/share/google-cloud-sdk/path.zsh.inc"
+source "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc"
+# Add datadog devtools binaries to the PATH
+export PATH="$HOME/dd/devtools/bin:$PATH"
+
+# Point GOPATH to our go sources
+export GOPATH="$HOME/go"
+
+# Add binaries that are go install-ed to PATH
+export PATH="$GOPATH/bin:$PATH"
+
+# Point DATADOG_ROOT to ~/dd symlink
+export DATADOG_ROOT="$HOME/dd"
+
+# Tell the devenv vm to mount $GOPATH/src rather than just dd-go
+export MOUNT_ALL_GO_SRC=1
+
+# store key in the login keychain instead of aws-vault managing a hidden keychain
+export AWS_VAULT_KEYCHAIN_NAME=login
+
+# tweak session times so you don't have to re-enter passwords every 5min
+export AWS_SESSION_TTL=24h
+export AWS_ASSUME_ROLE_TTL=1h
+
+# Helm switch from storing objects in kubernetes configmaps to
+# secrets by default, but we still use the old default.
+export HELM_DRIVER=configmap
+
+# Go 1.16+ sets GO111MODULE to off by default with the intention to
+# remove it in Go 1.18, which breaks projects using the dep tool.
+# https://blog.golang.org/go116-module-changes
+export GO111MODULE=auto
+export GOPRIVATE=github.com/DataDog
+# Configure Go to pull go.ddbuild.io packages.
+export GOPROXY=binaries.ddbuild.io,https://proxy.golang.org,direct
+export GONOSUMDB=github.com/DataDog,go.ddbuild.io
+# END ANSIBLE MANAGED BLOCK
+export GITLAB_TOKEN=$(security find-generic-password -a ${USER} -s gitlab_token -w)
+
+# Load commit signing SSH Key if not in the agent already
+ssh-add -l | grep "+git-commit-signing@datadoghq.com" > /dev/null || ssh-add --apple-use-keychain /Users/corey.finley/.ssh/datadog_git_commit_signing 2> /dev/null
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+sdk() {
+  unset -f sdk
+  [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+  sdk "$@"
 }
 
-function make_space() {
-    echo "============================================================================================================="
-    echo
-    echo
-    echo
+export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="$(brew --prefix)/lib/pkgconfig:$PKG_CONFIG_PATH"
+export CPATH="$(brew --prefix)/include:$CPATH"
+export LIBRARY_PATH="$(brew --prefix)/lib:$LIBRARY_PATH"
+
+source "$(brew --prefix)/share/zsh/site-functions/_ddtool"
+
+# eval "$(direnv hook zsh)"
+alias bzl_tidy="bzl run //domains/api_platform/apps/tidy"
+
+
+[[ /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# zprof
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+alias ghco="gh pr checkout"
+alias myprs="gh pr list --author '@me'"
+alias opr="gh pr view -w"
+oprc() {
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
+    gh pr view -w "$(git rev-parse --abbrev-ref HEAD)"
+  else
+    echo "Not in a git repository."
+  fi
 }
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/corey/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/corey/google-cloud-sdk/path.zsh.inc'; fi
+# watch PR - send a mac notification when a PR ci checks complete (not super reliable)
+function wpr() {
+        prtitle=$(gh pr view --json "title" | jq '.title' | sed s/\"//g)
+        gh pr checks --watch > /dev/null 2>&1
+        notification "PR CI checks finished" "$prtitle"
+}
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/corey/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/corey/google-cloud-sdk/completion.zsh.inc'; fi
+# create PR
+function cpr() {
+       gh pr create -d -a "@me"
+       opr
+       (sleep 350 ; wpr) &
+}
+

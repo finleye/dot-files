@@ -46,7 +46,7 @@ Plugin 'vim-airline/vim-airline'
 " Plugin 'itchyny/lightline.vim'
 " Plugin 'kristijanhusak/vim-dadbod-completion'
 " Plugin 'neoclide/coc.nvim'
-Plugin 'dracula/vim', { 'name': 'dracula' }
+" Plugin 'dracula/vim', { 'name': 'dracula' }
 
 Plugin 'chrisbra/csv.vim'
 
