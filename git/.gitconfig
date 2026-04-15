@@ -361,3 +361,5 @@
 	directory = *
 	directory = *
 	directory = *
+[maintenance]
+	repo = /Users/corey.finley/go/src/github.com/DataDog/dd-source

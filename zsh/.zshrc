@@ -1,9 +1,24 @@
+# ZSH prof
+# zmodload zsh/zprof
+
+HISTSIZE=100000
+SAVEHIST=100000
+
+# Speed up compinit
+autoload -Uz compinit
+zstyle ':completion:*' rehash true
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path ~/.zsh/cache
+compinit -C
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+DISABLE_AUTO_UPDATE="true"
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -18,17 +33,17 @@ eval_ondir() {
 
 chpwd_functions=( eval_ondir $chpwd_functions )
 
-source ~/.zshrc.secrets
 source ~/.zshrc.datadog
-# source $(brew --prefix)/opt/spaceship/spaceship.zsh
 
 export PATH=$PATH:/usr/local/go/bin
 
 # Update with your preference
 export DATADOG_ROOT=~/dd
+
 # Force certain more-secure behaviours from homebrew
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_CASK_OPTS=--require-sha
+
 # Add devtools binaries in your PATH, so you have access to 'to-staging' and 'branches-status'
 # !!! Make sure that this is *after* adding homebrew to PATH if you have brew. !!!
 export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
@@ -38,7 +53,6 @@ PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.2.dylib
 
 DEFAULT_USER="corey.finley"
 
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 AWS_REGION="us-east-1"
@@ -46,6 +60,8 @@ AWS_REGION="us-east-1"
 export INFRA_ROOT_DIR='/Users/coreyfinley/dev/infra'
 export TERM='xterm-256color'
 export EDITOR="nvim"
+export GIT_EDITOR="nvim"
+
 export PYTHONPATH=$HOME/dd/dogweb/lib:$HOME/dd/dogweb/lib/dogweb-model
 
 if [[ `uname` == 'Linux' ]]; then
@@ -79,7 +95,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 # export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
-# eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 
 alias zshconfig="nvim ~/.zshrc && source ~/.zshrc"
@@ -88,7 +103,7 @@ alias zshsource="source ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias w="watch"
 
-plugins=(git battery history-substring-search colored-man-pages colorize jsontools)
+plugins=(git colored-man-pages colorize jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,11 +124,11 @@ alias g="git"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gc="git checkout"
-alias gcb="git rev-parse --abbrev-ref HEAD"
 alias gcb="git checkout -b"
 alias gri="git rebase -i"
-alias gf="git fetch"
-alias gfp="git fetch --prune"
+alias gf="git fetch --prune --quiet"
+alias lg="lazygit"
+alias swtch="git switch -"
 
 function gco () {
   git checkout -t origin/$1
@@ -213,17 +228,27 @@ function current_vol() {
 
 alias rc=docker-compose run web rails console
 
-eval $(/opt/homebrew/bin/brew shellenv)
-# gh tool completion
-eval "$(gh completion -s zsh)"
-# . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-# BEGIN ANSIBLE MANAGED BLOCK
-# Load homebrew shell variables
+# Load homebrew environment (sets PATH and other variables)
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Cache brew prefix to avoid repeated subshell calls in later lines
+HOMEBREW_PREFIX="/opt/homebrew"
+
+# gh tool completion - cache it once instead of generating on every startup
+if command -v gh &> /dev/null && [[ ! -f ~/.zsh_completion.d/_gh ]]; then
+  mkdir -p ~/.zsh_completion.d
+  gh completion -s zsh > ~/.zsh_completion.d/_gh
+fi
+fpath=(~/.zsh_completion.d $fpath)
+# Convert to function so it doesn't execute during shell startup
+to-staging() {
+  gh pr comment $(gh pr view --json number -q .number) --body "/to-staging"
+}
+
+source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
+source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+# BEGIN ANSIBLE MANAGED BLOCK
+# Load homebrew shell variables (already loaded, removing duplicate)
 
 # Force certain more-secure behaviours from homebrew
 export HOMEBREW_NO_INSECURE_REDIRECT=1
@@ -232,10 +257,9 @@ export HOMEBREW_DIR=/opt/homebrew
 export HOMEBREW_BIN=/opt/homebrew/bin
 
 # Load python shims
-eval "$(pyenv init -)"
-
-# Load ruby shims
-eval "$(rbenv init -)"
+if command -v pyenv &> /dev/null; then
+  eval "$(pyenv init -)"
+fi
 
 # Prefer GNU binaries to Macintosh binaries.
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
@@ -244,9 +268,6 @@ export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# Add GCloud to PATH
-source "/opt/homebrew/share/google-cloud-sdk/path.zsh.inc"
-source "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc"
 # Add datadog devtools binaries to the PATH
 export PATH="$HOME/dd/devtools/bin:$PATH"
 
@@ -282,7 +303,12 @@ export GOPRIVATE=github.com/DataDog
 export GOPROXY=binaries.ddbuild.io,https://proxy.golang.org,direct
 export GONOSUMDB=github.com/DataDog,go.ddbuild.io
 # END ANSIBLE MANAGED BLOCK
-export GITLAB_TOKEN=$(security find-generic-password -a ${USER} -s gitlab_token -w)
+# Lazy-load GITLAB_TOKEN to avoid keychain lookup on every shell start
+gitlab_token() {
+  export GITLAB_TOKEN=$(security find-generic-password -a ${USER} -s gitlab_token -w)
+}
+# Uncomment if you need GITLAB_TOKEN available immediately:
+# export GITLAB_TOKEN=$(security find-generic-password -a ${USER} -s gitlab_token -w)
 
 # Load commit signing SSH Key if not in the agent already
 ssh-add -l | grep "+git-commit-signing@datadoghq.com" > /dev/null || ssh-add --apple-use-keychain /Users/corey.finley/.ssh/datadog_git_commit_signing 2> /dev/null
@@ -295,18 +321,22 @@ sdk() {
   sdk "$@"
 }
 
-export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PKG_CONFIG_PATH="$(brew --prefix)/lib/pkgconfig:$PKG_CONFIG_PATH"
-export CPATH="$(brew --prefix)/include:$CPATH"
-export LIBRARY_PATH="$(brew --prefix)/lib:$LIBRARY_PATH"
+export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
+export CPATH="$HOMEBREW_PREFIX/include:$CPATH"
+export LIBRARY_PATH="$HOMEBREW_PREFIX/lib:$LIBRARY_PATH"
 
-source "$(brew --prefix)/share/zsh/site-functions/_ddtool"
+source "$HOMEBREW_PREFIX/share/zsh/site-functions/_ddtool"
 
 # eval "$(direnv hook zsh)"
 alias bzl_tidy="bzl run //domains/api_platform/apps/tidy"
 
 
-[[ /opt/homebrew/bin/kubectl ]] && source <(kubectl completion zsh)
+# Cache kubectl completion instead of generating on every startup
+if command -v kubectl &> /dev/null && [[ ! -f ~/.zsh_completion.d/_kubectl ]]; then
+  mkdir -p ~/.zsh_completion.d
+  kubectl completion zsh > ~/.zsh_completion.d/_kubectl 2>/dev/null
+fi
 
 # zprof
 
@@ -339,3 +369,27 @@ function cpr() {
        (sleep 350 ; wpr) &
 }
 
+#     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export PATH=$HOME/dd/dd-source/domains/workflow/tools/bin:$PATH
+export DENO_DIR=/Users/corey.finley/.deno
+
+# ZSH prof
+# zprof
+
+
+# Created by `pipx` on 2025-10-20 12:40:35
+export PATH="$PATH:/Users/corey.finley/.local/bin"
+
+# BEGIN SCFW MANAGED BLOCK
+alias npm="scfw run npm"
+alias pip="scfw run pip"
+alias poetry="scfw run poetry"
+export SCFW_DD_AGENT_LOG_PORT="10365"
+export SCFW_DD_LOG_LEVEL="ALLOW"
+export SCFW_HOME="/Users/corey.finley/.scfw"
+# END SCFW MANAGED BLOCK
+
+alias connect="bash ~/dd/dd-source/domains/case_management/etc/tools/connect.sh"
+
+# Added by Yarn Switch
+source "/Users/corey.finley/.yarn/switch/env"
