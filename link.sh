@@ -9,3 +9,4 @@ ln -s ./vim/.* ~
 # ln -s ./vim/.vimrc.before ~
 # ln -s ./vim/.vimrc.bundles ~
 ln -s ./zsh/.zshrc ~
+ln -s /Users/corey.finley/dot-files/nvim/init.lua ~/.config/nvim/init.lua
