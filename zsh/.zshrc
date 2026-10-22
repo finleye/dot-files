@@ -311,7 +311,7 @@ gitlab_token() {
 # export GITLAB_TOKEN=$(security find-generic-password -a ${USER} -s gitlab_token -w)
 
 # Load commit signing SSH Key if not in the agent already
-ssh-add -l | grep "+git-commit-signing@datadoghq.com" > /dev/null || ssh-add --apple-use-keychain /Users/corey.finley/.ssh/datadog_git_commit_signing 2> /dev/null
+ssh-add -l 2> /dev/null | grep "+git-commit-signing@datadoghq.com" > /dev/null || ssh-add --apple-use-keychain /Users/corey.finley/.ssh/datadog_git_commit_signing 2> /dev/null
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -393,3 +393,15 @@ alias connect="bash ~/dd/dd-source/domains/case_management/etc/tools/connect.sh"
 
 # Added by Yarn Switch
 source "/Users/corey.finley/.yarn/switch/env"
+
+base_branch() {
+  gh repo view --json defaultBranchRef --jq .defaultBranchRef.name
+}
+
+# Trajectory - AI coding agent observability
+export PATH="/Users/corey.finley/.trajectory/bin:$PATH"
+
+[ -f "/opt/dogbrew/share/etc/dogbrew/init.zsh" ] && . "/opt/dogbrew/share/etc/dogbrew/init.zsh"
+
+# Pi
+export PATH="/Users/corey.finley/.volta/tools/image/node/24.14.1/bin:$PATH"

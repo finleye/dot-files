@@ -6,6 +6,8 @@
   editor = vim
 	excludesfile = /Users/corey/.gitignore_global
 	hooksPath = /usr/local/dd/global_hooks
+	fsmonitor = true
+	untrackedcache = true
 [alias]
   b = branch
   l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
@@ -363,3 +365,15 @@
 	directory = *
 [maintenance]
 	repo = /Users/corey.finley/go/src/github.com/DataDog/dd-source
+[fetch]
+	writeCommitGraph = true
+[include]
+	path = /Users/corey.finley/.config/datadog/git/config
+[datadog]
+	team = cloud-siem-backend
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

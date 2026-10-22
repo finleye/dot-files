@@ -106,6 +106,20 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" }, -- Optional icons
     config = function()
       require("nvim-tree").setup({
+        on_attach = function(bufnr)
+          -- Keep all default nvim-tree mappings
+          require("nvim-tree.api").config.mappings.default_on_attach(bufnr)
+
+          -- Custom: open selected file in a new tab with plain "t"
+          -- (nvim-tree's default for this is <C-t>; this adds a single-key alias)
+          vim.keymap.set("n", "t", require("nvim-tree.api").node.open.tab, {
+            desc = "nvim-tree: Open: New Tab",
+            buffer = bufnr,
+            noremap = true,
+            silent = true,
+            nowait = true,
+          })
+        end,
         view = {
           width = 30,
           side = "left",
@@ -542,6 +556,10 @@ require("lazy").setup({
   },
   { 'nvim-mini/mini.nvim', version = false },
   {
+    "dkarter/bullets.vim",
+    ft = { "markdown", "text" },
+  },
+  {
     "OXY2DEV/markview.nvim",
     lazy = false,
 
@@ -558,7 +576,19 @@ require("lazy").setup({
 })
 
 -- Telescope keymaps
-vim.keymap.set("n", "<C-t>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true, desc = "Find Files (Telescope)" })
+vim.keymap.set("n", "<C-t>", function()
+  -- In the Obsidian vault, many sensitive notes are gitignored
+  -- (Notes/Journal, People, Promotions, Performance Reviews, Interviews).
+  -- Include them in the picker there; elsewhere keep the default
+  -- gitignore-respecting behavior.
+  local vault_dir = vim.fn.expand("~/cfinley")
+  local cwd = vim.loop.cwd()
+  if cwd == vault_dir or cwd:sub(1, #vault_dir + 1) == vault_dir .. "/" then
+    require("telescope.builtin").find_files({ no_ignore = true })
+  else
+    require("telescope.builtin").find_files()
+  end
+end, { noremap = true, silent = true, desc = "Find Files (Telescope)" })
 vim.keymap.set("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "Live Grep" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true, desc = "Find Buffers" })
 
@@ -581,6 +611,13 @@ vim.keymap.set("n", "<leader>fS", builtin.lsp_workspace_symbols, { desc = "Works
 vim.keymap.set("n", "<C-]>", builtin.lsp_definitions,
   { noremap = true, silent = true, desc = "Go to LSP definitions (Telescope)" }) -- Override <C-]> globally
 
+-- Spell suggestions in a small popup at the cursor
+vim.keymap.set("n", "z=", function()
+  builtin.spell_suggest(require("telescope.themes").get_cursor({
+    layout_config = { width = 40, height = 12 },
+  }))
+end, { desc = "Spell suggestions (Telescope)" })
+
 -- clear search highlight
 vim.keymap.set("n", "//", ":nohlsearch<CR>", {
   noremap = true,
@@ -601,6 +638,10 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" }
 -- Octo commands
 vim.keymap.set("n", "<leader>op", "<cmd>Octo pr<CR>", { desc = "Open PR for current branch" })
 vim.keymap.set("n", "<leader>ol", "<cmd>Octo pr list<CR>", { desc = "List PRs" })
+
+-- Markview commands (moved off <leader>m to avoid input delay on <leader>m NvimTreeFocus)
+vim.keymap.set("n", "<leader>vr", "<cmd>Markview render<CR>", { desc = "Markview: re-render preview" })
+vim.keymap.set("n", "<leader>vt", "<cmd>Markview toggle<CR>", { desc = "Markview: toggle preview" })
 
 vim.filetype.add({
   extension = {
