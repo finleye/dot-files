@@ -1,0 +1,38 @@
+onboarding = false
+[ui]
+show_agent_labels_on_pane_borders = true
+
+agent_panel_sort = "priority"
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "nord"
+auto_switch = false
+
+[keys]
+# Ported from ~/.tmux.conf
+prefix = "ctrl+a"
+
+# tmux: bind-key c kill-pane
+close_pane = "prefix+c"
+# tmux: bind w new-window (c freed up by the swap above)
+new_tab = "prefix+w"
+# freed up since new_tab now lives on prefix+w
+workspace_picker = "prefix+n"
+# freed up since split_horizontal now lives on prefix+s
+settings = "prefix+x"
+
+# tmux: bind-key -r C-h/C-l select-window (kept separate from prefix+h/l pane focus)
+previous_tab = "prefix+ctrl+h"
+next_tab = "prefix+ctrl+l"
+
+# tmux: bind -n C-h/C-j/C-k/C-l select-pane (direct, no prefix needed)
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+
+# tmux: bind s split-window -v (pane below)
+split_horizontal = "prefix+s"
+# tmux: bind v split-window -h (pane side-by-side) — already herdr's default
