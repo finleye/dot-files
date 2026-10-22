@@ -26,14 +26,15 @@ ZSH=$HOME/.oh-my-zsh
 # fix Maven "Too many open files" issue
 ulimit -n 32768
 
-eval_ondir() {
-  eval "`ondir \"$OLDPWD\" \"$PWD\"`"
-}
+if (( $+commands[ondir] )); then
+  eval_ondir() {
+    eval "`ondir \"$OLDPWD\" \"$PWD\"`"
+  }
+  chpwd_functions=( eval_ondir $chpwd_functions )
+fi
 
-
-chpwd_functions=( eval_ondir $chpwd_functions )
-
-source ~/.zshrc.datadog
+# Secrets live here on the Mac; in workspaces use `workspaces secrets` instead
+[[ -f ~/.zshrc.datadog ]] && source ~/.zshrc.datadog
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -49,7 +50,7 @@ export HOMEBREW_CASK_OPTS=--require-sha
 export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
 
 # enchant c library location for pyenchant
-PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.2.dylib
+[[ "$OSTYPE" == darwin* ]] && PYENCHANT_LIBRARY_PATH=/opt/homebrew/lib/libenchant-2.2.dylib
 
 DEFAULT_USER="corey.finley"
 
@@ -84,8 +85,10 @@ export PYTHONPATH=$SPARK_HOME/libexec/python:$PYTHONPATH
 export PATH=$PATH:$SPARK_HOME/bin
 export ANSIBLE_LIBRARY=$HOME/Documents/ansible/modules
 
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH=$PATH:/opt/homebrew/bin
+if [[ "$OSTYPE" == darwin* ]]; then
+  export PATH="/usr/local/opt/openssl/bin:$PATH"
+  export PATH=$PATH:/opt/homebrew/bin
+fi
 export PATH=$PATH:/usr/local/go/bin
 
 # Base16 Shell
@@ -93,7 +96,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+# macOS only: this resets PATH entirely, which would drop workspace PATH entries
+[[ "$OSTYPE" == darwin* ]] && export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 # export PATH="$HOME/.rbenv/shims:$HOME/bin:$PATH"
 export PATH="./bin:$PATH"
 
@@ -188,6 +192,9 @@ jcurl () {
   curl $* | jq '.'
 }
 
+# 1Password CLI: unlock with Touch ID
+OP_BIOMETRIC_UNLOCK_ENABLED=true
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -199,8 +206,10 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 # added by Snowflake SnowSQL installer v1.2
-export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
-alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+if [[ -d /Applications/SnowSQL.app ]]; then
+  export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+  alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+fi
 
 # pretty print decoded jwt
 function jwt() {
@@ -229,10 +238,11 @@ function current_vol() {
 alias rc=docker-compose run web rails console
 
 # Load homebrew environment (sets PATH and other variables)
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Cache brew prefix to avoid repeated subshell calls in later lines
-HOMEBREW_PREFIX="/opt/homebrew"
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  # Cache brew prefix to avoid repeated subshell calls in later lines
+  HOMEBREW_PREFIX="/opt/homebrew"
+fi
 
 # gh tool completion - cache it once instead of generating on every startup
 if command -v gh &> /dev/null && [[ ! -f ~/.zsh_completion.d/_gh ]]; then
@@ -245,8 +255,10 @@ to-staging() {
   gh pr comment $(gh pr view --json number -q .number) --body "/to-staging"
 }
 
-source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
-source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+if [[ -n "$HOMEBREW_PREFIX" && -d "$HOMEBREW_PREFIX/share/google-cloud-sdk" ]]; then
+  source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
+  source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+fi
 # BEGIN ANSIBLE MANAGED BLOCK
 # Load homebrew shell variables (already loaded, removing duplicate)
 
@@ -311,7 +323,10 @@ gitlab_token() {
 # export GITLAB_TOKEN=$(security find-generic-password -a ${USER} -s gitlab_token -w)
 
 # Load commit signing SSH Key if not in the agent already
-ssh-add -l 2> /dev/null | grep "+git-commit-signing@datadoghq.com" > /dev/null || ssh-add --apple-use-keychain /Users/corey.finley/.ssh/datadog_git_commit_signing 2> /dev/null
+# (macOS only; workspaces configure commit signing themselves)
+if [[ "$OSTYPE" == darwin* ]]; then
+  ssh-add -l 2> /dev/null | grep "+git-commit-signing@datadoghq.com" > /dev/null || ssh-add --apple-use-keychain "$HOME/.ssh/datadog_git_commit_signing" 2> /dev/null
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -321,12 +336,13 @@ sdk() {
   sdk "$@"
 }
 
-export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
-export CPATH="$HOMEBREW_PREFIX/include:$CPATH"
-export LIBRARY_PATH="$HOMEBREW_PREFIX/lib:$LIBRARY_PATH"
-
-source "$HOMEBREW_PREFIX/share/zsh/site-functions/_ddtool"
+if [[ -n "$HOMEBREW_PREFIX" ]]; then
+  export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH"
+  export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
+  export CPATH="$HOMEBREW_PREFIX/include:$CPATH"
+  export LIBRARY_PATH="$HOMEBREW_PREFIX/lib:$LIBRARY_PATH"
+  [[ -f "$HOMEBREW_PREFIX/share/zsh/site-functions/_ddtool" ]] && source "$HOMEBREW_PREFIX/share/zsh/site-functions/_ddtool"
+fi
 
 # eval "$(direnv hook zsh)"
 alias bzl_tidy="bzl run //domains/api_platform/apps/tidy"
@@ -371,14 +387,14 @@ function cpr() {
 
 #     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export PATH=$HOME/dd/dd-source/domains/workflow/tools/bin:$PATH
-export DENO_DIR=/Users/corey.finley/.deno
+export DENO_DIR="$HOME/.deno"
 
 # ZSH prof
 # zprof
 
 
 # Created by `pipx` on 2025-10-20 12:40:35
-export PATH="$PATH:/Users/corey.finley/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # BEGIN SCFW MANAGED BLOCK
 alias npm="scfw run npm"
@@ -386,22 +402,22 @@ alias pip="scfw run pip"
 alias poetry="scfw run poetry"
 export SCFW_DD_AGENT_LOG_PORT="10365"
 export SCFW_DD_LOG_LEVEL="ALLOW"
-export SCFW_HOME="/Users/corey.finley/.scfw"
+export SCFW_HOME="$HOME/.scfw"
 # END SCFW MANAGED BLOCK
 
 alias connect="bash ~/dd/dd-source/domains/case_management/etc/tools/connect.sh"
 
 # Added by Yarn Switch
-source "/Users/corey.finley/.yarn/switch/env"
+[[ -f "$HOME/.yarn/switch/env" ]] && source "$HOME/.yarn/switch/env"
 
 base_branch() {
   gh repo view --json defaultBranchRef --jq .defaultBranchRef.name
 }
 
 # Trajectory - AI coding agent observability
-export PATH="/Users/corey.finley/.trajectory/bin:$PATH"
+export PATH="$HOME/.trajectory/bin:$PATH"
 
 [ -f "/opt/dogbrew/share/etc/dogbrew/init.zsh" ] && . "/opt/dogbrew/share/etc/dogbrew/init.zsh"
 
 # Pi
-export PATH="/Users/corey.finley/.volta/tools/image/node/24.14.1/bin:$PATH"
+[[ -d "$HOME/.volta/tools/image/node/24.14.1/bin" ]] && export PATH="$HOME/.volta/tools/image/node/24.14.1/bin:$PATH"
